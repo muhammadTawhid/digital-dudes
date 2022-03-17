@@ -1,0 +1,30 @@
+import './PricingCard.css';
+import React from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
+
+const PricingCard = (props) => {
+
+    const { _id, pricingTitle, pricingValue, services } = props.data;
+    
+    return (
+        <div className="col-md-4 pricing-card">
+            <h4>{pricingTitle}</h4>
+            <h2><span className="span-text">${pricingValue}</span><strong> / Monthly</strong></h2>
+            {
+                services && services.map(service =>
+                    <div key={service}><p><FontAwesomeIcon icon={faCheck} /> {service}</p>
+                    </div>
+                )
+            }
+            <Link to={`payment/${_id}`}>
+                {_id ? <button className="brand-btn">Choose Now</button> : <Skeleton />}
+            </Link>
+        </div>
+    );
+};
+
+export default PricingCard;

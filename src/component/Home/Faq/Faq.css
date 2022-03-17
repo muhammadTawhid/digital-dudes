@@ -1,0 +1,60 @@
+.faq-div {
+    height: 600px;
+    overflow: hidden;
+}
+
+.Collapsible {
+    box-shadow: 2px 1px 10px rgba(128, 128, 128, 0.37);
+}
+
+.is-closed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.is-open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #ed1f24, #e84d1a);
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.Collapsible__contentInner {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    color: #777;
+    font-weight: normal;
+}
+
+.is-open svg {
+    transform: rotate(180deg);
+    color: #e84d1a;
+    background-color: #ffffff;
+    font-size: 40px;
+    padding: 0 5px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: 0.3s;
+}
+
+.is-closed svg {
+    color: #ffffff;
+    background-image: linear-gradient(to right, #ed1f24, #e84d1a);
+    font-size: 40px;
+    padding: 0 5px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: 0.3s;
+}

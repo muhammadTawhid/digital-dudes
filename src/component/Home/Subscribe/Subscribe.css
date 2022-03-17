@@ -1,0 +1,49 @@
+.subscribe-panel {
+    width: 100%;
+    height: 230px;
+    background-image: linear-gradient(to right, #ed2024, #f36434);
+    margin: 2em auto;
+    padding: 0em 5em;
+}
+
+.subscribe-panel svg {
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+    transform: translateX(600px);
+}
+
+.subscribe-panel h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.subscribe-panel p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: white;
+    font-style: normal;
+    word-spacing: 1px;
+}
+
+.subscribe-panel input {
+    padding: 20px 20px;
+    border: none;
+    width: 420px;
+    outline: none;
+    border-radius: 50px;
+}
+
+.subscribe-panel button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #ed2024, #f36434);
+    font-size: medium;
+    font-weight: 600;
+    word-spacing: 1px;
+    color: white;
+    transform: translateY(-59px) translateX(264px);
+}

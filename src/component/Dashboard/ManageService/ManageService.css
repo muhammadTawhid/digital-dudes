@@ -1,0 +1,79 @@
+.manageService-card {
+    width: 500px;
+    height: 140px;
+    margin: .8em 0;
+    padding: 20px;
+    box-shadow: 5px 1px 70px #e7e5e5;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.manageService-card img {
+    border: 1px solid red;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ed3c1f;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.manageService-card div {
+    width: 380px;
+    height: 100px;
+    overflow: hidden;
+    padding-left: 15px;
+}
+
+.manageService-card h4 {
+    font-weight: 700;
+}
+
+.manageService-card p {
+    text-align: justify;
+    width: 365px;
+    height: 48px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(73, 73, 73);
+}
+
+.manageService-card button {
+    transform: translateX(120px) translateY(20px);
+    color: white;
+    margin: 0 30px;
+    font-size: 25px;
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid #e33723;
+    display: none;
+    transition: 0.3s;
+}
+
+.manageService-card button:hover {
+    background-color: #e33723;
+    transition: 0.3s;
+
+}
+
+.manageService-card:hover button {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.manageService-card:hover {
+    background-color: #2d2d2d;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+.manageService-card:hover h4 {
+    display: none;
+}
+
+.manageService-card:hover p {
+    display: none;
+}
+
+.manageService-card:hover img {
+    display: none;
+}

@@ -1,0 +1,18 @@
+.brand-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #ed2024, #f36434);
+  font-size: medium;
+  font-weight: 600;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.brand-text {
+  font-size: 60px;
+  font-weight: 700;
+}
+

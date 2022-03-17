@@ -1,0 +1,71 @@
+.service-header {
+    margin-top: 5em;
+    width: 535px;
+}
+
+.service-header p {
+    margin-top: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(73, 73, 73);
+}
+
+.service-card {
+    width: 250px;
+    height: 350px;
+    margin: 1.1em 0;
+    padding: 20px;
+    border: 1px solid #757474;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.service-card img {
+    width: 80px;
+    border: 1px solid #f33f38;
+    border-radius: 50px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.service-card h4 {
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.service-card p {
+    height: 96px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(73, 73, 73);
+}
+
+.service-card button {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    color: #f33f38;
+    border: none;
+    border-bottom: 1px solid #f33f38;
+    transition: 0.2s;
+}
+
+.service-card button:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    background-color: #2d2d2d;
+    color: white;
+    transition: 0.5s;
+    transform: translateY(-5%);
+    border-radius: 10px;
+}
+
+.service-card:hover p {
+    color: #c3cacf;
+}
+
+.service-card h4:hover {
+    color: #f33f38;
+    transition: 0.3s;
+}

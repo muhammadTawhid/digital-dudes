@@ -1,0 +1,133 @@
+.login-div {
+    height: 100%;
+    background-image: url("../../../images/technology.jpg");
+    background-size: 100%;
+}
+
+.login-div::before {
+    height: 1000px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+.form-box {
+    width: 400px;
+    margin: 3em auto;
+    padding: 30px;
+    border: 1px solid #ff5b00;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    font-weight: 700;
+    transform: translateZ(10px);
+}
+
+
+.form-box input {
+    display: block;
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid darkgray;
+    padding: 5px 0px;
+}
+
+.form-input-btn {
+    padding: 10px 20px;
+    border: 1px solid #ff5b00;
+    border-radius: 50px;
+    background-color: #ff5b00;
+    font-size: medium;
+    font-weight: 600;
+    word-spacing: 1px;
+    color: white;
+    width: 100%;
+    transition: 0.3s;
+}
+
+
+.form-input-btn:hover {
+    border: 1px solid #ff5b00;
+    background: transparent;
+    color: black;
+    transition: 0.3s;
+
+}
+
+.social-btn {
+    margin: .5em 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    word-spacing: 1px;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    transition: 0.3s;
+
+}
+
+.google-btn {
+    border: 1px solid #f33a2d;
+    background-color: #f33a2d;
+}
+
+.google-btn:hover {
+    border: 1px solid #f33a2d;
+    background: transparent;
+    color: black;
+    transition: 0.3s;
+}
+
+.facebook-btn {
+    border: 1px solid #1877f2;
+    background-color: #1877f2;
+}
+
+.facebook-btn:hover {
+    border: 1px solid #1877f2;
+    background: transparent;
+    color: black;
+    transition: 0.3s;
+}
+
+.facebook-btn svg, .google-btn svg {
+    text-align: left;
+    transform: translateX(-50px);
+
+}
+
+.err-message {
+    /* text-align: center ; */
+    color: rgb(190, 43, 43);
+    margin-top: 50px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ed3c1f;
+    text-decoration: underline;
+}
+
+.or-edit {
+    border-bottom: 1px solid darkgray;
+    line-height: 0.4px;
+}
+
+.or-text {
+    padding: 5px;
+    background-color: white;
+}
+
+.eye-btn {
+    transform: translateY(30px);
+    margin-left: -30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+}

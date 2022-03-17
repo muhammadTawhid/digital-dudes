@@ -1,0 +1,28 @@
+.payment-form-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.payment-form-container input, .StripeElement {
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px 0px;
+
+}
+
+.payment-form-container button {
+  width: 100%;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+
+}

@@ -1,0 +1,95 @@
+.navbar {
+    border-bottom: .5px solid #e7f6fb5e;
+}
+
+/* .navbar-nav{
+    width: 100%;
+    border: 1px solid red;
+    transform: translateY(100px);
+    position: absolute;
+    background-color: #2d2d2d;
+    color: black !important;
+} */
+
+.navbar a {
+    margin-right: 1.5em;
+    text-decoration: none;
+    font-weight: 600;
+    color: #e7f6fb !important;
+}
+
+.navbar a:hover {
+    color: #ed2f21 !important;
+}
+
+.navbar-toggler svg {
+    color: #e7f6fb;
+}
+
+.navbar-toggler {
+    border: 1px solid #e7f6fb !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:not(.collapsed)>#menuBar {
+    display: none;
+}
+
+#crossMark {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed)>#crossMark {
+    display: block;
+}
+
+.icon-image {
+    width: 40px;
+    clip-path: circle();
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-color: #ed3c1f;
+}
+
+.dropdown-toggle::after {
+    display: none;
+    content: "";
+}
+
+.log-out {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.scroll-top-btn {
+    padding: 5px 10px;
+    background: white;
+    border: none;
+    border: 1px solid red;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    transform: translateZ(50px);
+    transition: 0.2s;
+}
+
+.scroll-top-btn:hover {
+    background: #ed3c1f;
+    color: white;
+    transition: 0.2s;
+}
+
+.scroll-top-btn svg {
+    font-size: 30px;
+}
+
+.scroll-top-btn-hide {
+    display: none;
+}
