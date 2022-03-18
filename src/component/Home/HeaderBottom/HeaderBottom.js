@@ -13,7 +13,7 @@ const HeaderBottom = () => {
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <h1 className="text-center">40</h1>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12 bal">
+                    <div className="col-lg-6 col-md-12 col-sm-12">
                         <div className="main-content ">
                             <h4>Offices in different countries</h4>
                             <p className="main-content-p">When interacting with customers- we strive to make sure that we present an experience ensuring their satisfaction. Our goal is to keep the customers happy and regularly coming back.</p>
@@ -36,20 +36,3 @@ const HeaderBottom = () => {
 };
 
 export default HeaderBottom;
-
-
-
-
-// <div class="row align-items-center">
-//     <div class="col-md-4">
-//         <img src="img/features/about_img2.png" alt="img">
-//     </div>
-//     <div class="col-md-8">
-//         <p>Curabitur rutrum nisi non mi bibendum finibus. Donec eu justo nisi. Ut sagittis sed tellus a volutpat.</p>
-//         <ul class="green">
-//             <li>Integer ut condimentum turpis.</li>
-//             <li>Donec molestie rhoncus facilisis.</li>
-//         </ul>
-//     </div>
-
-// </div>
