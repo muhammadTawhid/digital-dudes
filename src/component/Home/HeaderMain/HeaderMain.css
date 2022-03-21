@@ -99,7 +99,8 @@
 
 
 
-/* 
+/*
+ 
  X-Small devices (portrait phones, less than 576px)
 @media (min-width: 300.98px) and (max-width: 575.98px) { 
     
@@ -124,4 +125,5 @@
 @media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
     
 }
+
 */
