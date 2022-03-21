@@ -46,7 +46,7 @@
     padding: 0 5px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .is-closed svg {
@@ -56,7 +56,7 @@
     padding: 0 5px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
  

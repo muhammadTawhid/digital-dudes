@@ -1,3 +1,4 @@
+import '../TeamCard/TeamCard.css';
 import React from 'react';
 import Fade from 'react-reveal/Reveal';
 import team1 from '../../../images/team1.jpg'
@@ -33,7 +34,7 @@ const Team = () => {
     return (
         <Fade bottom>
             <div className="container mb-5 pb-5">
-                <h2 className="brand-text text-center mb-3">Our Team Members</h2>
+                <h2 className="brand-text text-center team-heading">Our Team Members</h2>
                 <div className="row d-flex justify-content-around">
                     {
                         teamData.map(teamMember => <TeamCard key={teamMember.name} teamMember={teamMember} />)

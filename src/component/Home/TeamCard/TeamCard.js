@@ -7,7 +7,7 @@ const TeamCard = (props) => {
     const { img, name, position } = props.teamMember;
 
     return (
-        <div className="col-md-3 team-card">
+        <div className="col-md-3 col-lg-3 team-card">
             <img src={img} alt="" />
             <h4>{name}</h4>
             <p>{position}</p>
