@@ -7,7 +7,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 const Faq = () => {
     return (
         <div className="faq-div">
-            <h2 className="brand-text">Get Your Answer</h2>
+            <h2 className="brand-text text-center">Get Your Answer</h2>
             <Collapsible trigger={["Why choose us", <FontAwesomeIcon icon={faAngleDown} />]} className="panel-header" >
                 <p>
                     Our team is made up of award-winning marketers, designers, and developers, and we know what it takes to get real results online. We also keep the focus on the metrics that mean the most, like leads and revenue generated.
