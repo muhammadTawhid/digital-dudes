@@ -74,14 +74,14 @@ const Footer = () => {
 
 
                 <section
-                    className="d-flex justify-content-center justify-content-lg-between border-bottom footer-bottom-section"
+                    className=" row  footer-bottom-section d-flex align-items-center"
                 >
-                    <div className="text-center">
+                    <div className="col-sm-12 col-md-9">
                         © {(new Date().getFullYear())} Copyright:
                         <a className="text-reset fw-bold" href="https://digital-dudes.web.app/"> DigitalDudes.com</a>
                     </div>
 
-                    <div>
+                    <div className="col-sm-12 col-md-3">
                         <a href="https://twitter.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
                         <a href="https://web.facebook.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
                         <a href="https://www.pinterest.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faPinterest} /></a>
