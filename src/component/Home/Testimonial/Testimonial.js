@@ -1,4 +1,5 @@
 import '../TestimonialCard/TestimonialCard.css';
+import '../TestimonialCard/TestimonialCard.css';
 import React, { useState, useEffect } from 'react';
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -14,6 +15,7 @@ import Fade from 'react-reveal/Reveal';
 
 
 const Testimonial = () => {
+    const [matches, setMatches] = useState()
     const [reviews, setReviews] = useState([]);
     const skeletonData = ["1", "2", "3", "4", "5"];
 
@@ -22,10 +24,19 @@ const Testimonial = () => {
             .then(res => setReviews(res.data))
     }, [])
 
+    console.log(matches,"match");
+
+    useEffect(() => {
+        window
+        .matchMedia("(min-width: 300.98px)")
+        .addEventListener('change', e => setMatches( e.matches ));
+      }, []);
+
+
     return (
         <Fade bottom>
             <div className="mt-2 mb-5 pb-5">
-                <h2 className="brand-text text-center">Clients Feedback</h2>
+                <h2 className="brand-text text-center testimonial-heading">Clients Feedback</h2>
                 <div className="container">
                     <Swiper
                         slidesPerView={3}

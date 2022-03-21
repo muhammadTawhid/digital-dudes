@@ -78,6 +78,9 @@
         width: 190px;
         height: 280px;
     }
+    .team-card div {
+        transform: translateY(-320px) translateX(20px);
+    }
 }  
 
     /* Small devices (landscape phones, less than 768px)  */
@@ -91,7 +94,7 @@
         height: 280px;
     }
     .team-card div {
-        transform: translateX(20px);
+        transform: translateY(-320px) translateX(20px);
     }
 }
 
@@ -102,7 +105,7 @@
         height: 300px;
     }
     .team-card div {
-        transform: translateX(15px);
+        transform: translateY(-320px) translateX(15px);
     }
 }
 
