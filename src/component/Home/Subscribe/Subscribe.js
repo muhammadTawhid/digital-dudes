@@ -13,27 +13,49 @@ const Subscribe = () => {
     }
     return (
         <Bounce left>
-            <div className="subscribe-panel d-flex align-items-center">
+            <div className="subscribe-panel  d-flex align-items-center">
                 {subscriptedLetter ?
                     <div>
                         <h1 className="brand-text text-white mb-5">Thanks for subscribing to our newsletter.</h1> <FontAwesomeIcon icon={faGrinAlt} />
                     </div>
                     :
-                    <div className="row">
-                        <div className="col-xl-7 col-lg-7">
-                            <div className="text">
-                                <h2>Subscribe for Newsletter</h2>
-                                <p>Manage Your Business With Us</p>
-                                <FontAwesomeIcon icon={faPaperPlane} />
+
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-7 col-md-7 col-lg-7">
+                                <div className="icon">
+                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                </div>
+                                <div>
+                                    <h2>Subscribe for Newsletter</h2>
+                                    <p>Manage Your Business With Our Technology</p>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-5 col-md-5 col-xl-5 col-lg-5">
+                                <form onSubmit={handleEmailSubmit}>
+                                    <input type="email" name="" id="" placeholder="Email Address..." required />
+                                    <button type="submit">Subscribe Now</button>
+                                </form>
                             </div>
                         </div>
-                        <div className="col-xl-5 col-lg-5">
-                            <form onSubmit={handleEmailSubmit}>
-                                <input type="email" name="" id="" placeholder="Email Address..." required />
-                                <button type="submit">Subscribe Now</button>
-                            </form>
-                        </div>
+
                     </div>
+                    // <div className="row">
+                    //     <div className="col-xl-7 col-lg-7">
+                    //         <div className="text">
+                    //             <h2>Subscribe for Newsletter</h2>
+                    //             <p>Manage Your Business With Us</p>
+                    //             <FontAwesomeIcon icon={faPaperPlane} />
+                    //         </div>
+                    //     </div>
+                    //     <div className="col-xl-5 col-lg-5">
+                    //         <form onSubmit={handleEmailSubmit}>
+                    //             <input type="email" name="" id="" placeholder="Email Address..." required />
+                    //             <button type="submit">Subscribe Now</button>
+                    //         </form>
+                    //     </div>
+                    // </div>
                 }
             </div>
         </Bounce>
