@@ -22,7 +22,7 @@ const Subscribe = () => {
 
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-xl-7 col-md-7 col-lg-7">
+                            <div class="col-xl-7 col-md-6 col-lg-6">
                                 <div className="icon">
                                     <FontAwesomeIcon icon={faPaperPlane} />
                                 </div>
@@ -32,7 +32,7 @@ const Subscribe = () => {
                                 </div>
 
                             </div>
-                            <div class="col-sm-5 col-md-5 col-xl-5 col-lg-5">
+                            <div class="col-md-6 col-xl-5 col-lg-6">
                                 <form onSubmit={handleEmailSubmit}>
                                     <input type="email" name="" id="" placeholder="Email Address..." required />
                                     <button type="submit">Subscribe Now</button>
