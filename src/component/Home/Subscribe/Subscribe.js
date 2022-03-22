@@ -15,14 +15,14 @@ const Subscribe = () => {
         <Bounce left>
             <div className="subscribe-panel  d-flex align-items-center">
                 {subscriptedLetter ?
-                    <div>
+                    <div className="container">
                         <h1 className="brand-text text-white mb-5">Thanks for subscribing to our newsletter.</h1> <FontAwesomeIcon icon={faGrinAlt} />
                     </div>
                     :
 
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-xl-7 col-md-6 col-lg-6">
+                            <div class="col-md-6 col-xl-7 col-lg-6">
                                 <div className="icon">
                                     <FontAwesomeIcon icon={faPaperPlane} />
                                 </div>
