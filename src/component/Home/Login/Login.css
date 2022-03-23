@@ -134,9 +134,10 @@
 /* X-Small devices (portrait phones, less than 576px) */
 @media (min-width: 300.98px) and (max-width: 575.98px) { 
     .login-div {
-        background-image: url("../../../images/office.jpg");
-        background-repeat: no-repeat;
-        /* background-size: 100% 100%; */
+        background-size: 100% 450px;
+    }
+    .login-div::before{
+        height: 1100px;
     }
     .form-box{
         width: 330px;
@@ -149,25 +150,26 @@
     /* Small devices (landscape phones, less than 768px)  */
 @media (min-width: 575.98px) and (max-width: 767.98px) { 
     .login-div {
-        background-image: url("../../../images/office.jpg");
-        background-repeat: no-repeat;
+        background-size: 100% 520px;
+    }
+    .login-div::before{
+        height: 1100px;
     }
 }
 
     /* Medium devices (tablets, less than 992px)  */
 @media (min-width: 767.98px) and (max-width: 991.98px) { 
+     .login-div::before{
+        height: 1100px;
+    }
     .login-div {
-        background-image: url("../../../images/office.jpg");
-        background-repeat: no-repeat;
+        background-size: 100% 600px;
     }
 }
 
     /* Large devices (desktops, less than 1200px)  */
 @media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    
-}
-
-    /* X-Large devices (large desktops, less than 1400px)  */
-@media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
-    
+    .login-div {
+        background-size: 100% 850px;
+    }
 }
