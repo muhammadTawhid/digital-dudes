@@ -38,7 +38,7 @@ const ManageService = () => {
             <div className="col-md-2">
                 <Sidebar />
             </div>
-            <div className="col-md-10">
+            <div className="col-md-10 manageService-div">
                 {serviceUpdateId ? "" : <h1 className="brand-text text-center mt-2">Manage your services</h1>}
                 <div className="row d-flex justify-content-evenly container mt-4">
                     {serviceUpdateId && <ActionPageForm serviceUpdateId={serviceUpdateId} setServiceUpdateId={setServiceUpdateId} setServiceData={setServiceData} />}

@@ -30,8 +30,8 @@
 
 .manageService-card p {
     text-align: justify;
-    width: 365px;
-    height: 48px;
+    /* width: 365px; */
+    /* height: 48px; */
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     color: rgb(73, 73, 73);
@@ -66,14 +66,51 @@
     transition: 0.3s;
 }
 
-.manageService-card:hover h4 {
+.manageService-card:hover h4, .manageService-card:hover p, .manageService-card:hover img {
     display: none;
 }
 
-.manageService-card:hover p {
-    display: none;
+
+ 
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 300.98px) and (max-width: 575.98px) { 
+    .manageService-div{
+        position: fixed;
+        margin-top: 4em;
+        padding: 0 1em;
+    }
+    .manageService-div h1{
+        font-size: 30px;
+    }
+    .manageService-card h4{
+        font-size: 20px;
+    }
+    .manageService-card p{
+        text-align: left;
+        font-size: 14px;
+
+    }
+    .manageService-card button {
+        transform: translateX(40px) translateY(20px);
+    }
+}  
+
+    /* Small devices (landscape phones, less than 768px)  */
+@media (min-width: 575.98px) and (max-width: 767.98px) { 
+    
 }
 
-.manageService-card:hover img {
-    display: none;
+    /* Medium devices (tablets, less than 992px)  */
+@media (min-width: 767.98px) and (max-width: 991.98px) { 
+    
+}
+
+    /* Large devices (desktops, less than 1200px)  */
+@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+    
+}
+
+    /* X-Large devices (large desktops, less than 1400px)  */
+@media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
+    
 }

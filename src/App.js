@@ -17,8 +17,9 @@ import PrivetRoute from './component/Home/PrivetRoute/PrivetRoute';
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({ name: "", email: "", imgUrl: "", admin: null })
-  console.log(loggedInUser)
+  const [loggedInUser, setLoggedInUser] = useState({ name: "Tanjim", email: "tanjim@gmail.com", imgUrl: "https://i.ibb.co/WKjYBgg/user-Avatar.png", admin: true })
+  console.log(loggedInUser) 
+
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <BrowserRouter>

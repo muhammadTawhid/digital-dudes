@@ -5,12 +5,13 @@ import { faStar, faArrowRight, faArrowLeft, faSignOutAlt, faTasks, faFolderPlus,
 import logo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import { Offcanvas } from 'react-bootstrap';
 
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(true);
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-
+  console.log(sidebar,"sidebar");
   useEffect(() => {
     document.title = "Dashboard"
   }, []);
@@ -19,9 +20,8 @@ const Sidebar = () => {
     setLoggedInUser("")
   }
   return (
-    <div className="">
+    <div>
       <div className={sidebar ? "sidebar-on" : " sidebar-off"}>
-
         <div className="sidebar-header">
           <Link to="/">
             <img src={logo} alt="" />

@@ -147,6 +147,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                                             required="required"
                                             defaultValue={serviceUpdateId ? updatedService.serviceName : ""}
                                         />
+                                        <br />
                                         {errors.name && <small className="text-danger">{errors.name?.message}</small>}
                                         <div className="mt-5">
                                             <h6>{addReview ? "Your Image (optional)" : "Add Service Thumbnail"}</h6>
