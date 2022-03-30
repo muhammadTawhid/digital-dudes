@@ -40,7 +40,7 @@ const ManageService = () => {
             </div>
             <div className="col-md-10 manageService-div">
                 {serviceUpdateId ? "" : <h1 className="brand-text text-center mt-2">Manage your services</h1>}
-                <div className="row d-flex justify-content-evenly container mt-4">
+                <div className="row d-flex justify-content-evenly mt-4">
                     {serviceUpdateId && <ActionPageForm serviceUpdateId={serviceUpdateId} setServiceUpdateId={setServiceUpdateId} setServiceData={setServiceData} />}
                     <WarningModal show={modalShow} onHide={onHide} serviceDeleteId={serviceDeleteId} setServiceData={setServiceData} />
                     {serviceData.map(data =>
@@ -49,8 +49,10 @@ const ManageService = () => {
                             <div>
                                 <h4>{data.serviceName}</h4>
                                 <p>{data.serviceDescription}</p>
-                                <button onClick={() => setServiceUpdateId(data._id)}><FontAwesomeIcon icon={faEdit} /></button>
-                                <button onClick={() => handleSetServiceId(data._id)}><FontAwesomeIcon icon={faTrash} /></button>
+                                <div className="btn-div">
+                                        <button className="me-5" onClick={() => setServiceUpdateId(data._id)}><FontAwesomeIcon icon={faEdit} /></button>
+                                        <button onClick={() => handleSetServiceId(data._id)}><FontAwesomeIcon icon={faTrash} /></button>
+                                </div>
                             </div>
                         </div>
                     )}
