@@ -5,7 +5,6 @@ import { faStar, faArrowRight, faArrowLeft, faSignOutAlt, faTasks, faFolderPlus,
 import logo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
-import { Offcanvas } from 'react-bootstrap';
 
 
 const Sidebar = () => {

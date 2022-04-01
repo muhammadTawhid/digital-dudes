@@ -119,7 +119,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
             {addReview || serviceUpdateId ? "" : <div className="col-md-2">
                 <Sidebar />
             </div>}
-            <div className="col-md-10">
+            <div className="col-md-10 actionPageForm-div">
                 <h2 className="brand-text text-center">{addReview ? "Add Review" : serviceUpdateId ? "Edit Service" : "Add Service"}</h2>
                 <SuccessNotify setServiceUpdateId={setServiceUpdateId} setSuccessNotify={setSuccessNotify} successNotify={successNotify} />
                 <div className="form-container d-flex">
@@ -133,6 +133,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                                 <div className="row">
                                     <div className="col-md-6">
                                         <label>{addReview ? "Your Name" : "Service Name"}</label>
+                                        <br />
                                         <input
                                             {...register("name", {
                                                 required: "This field is required",
@@ -149,7 +150,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                                         />
                                         <br />
                                         {errors.name && <small className="text-danger">{errors.name?.message}</small>}
-                                        <div className="mt-5">
+                                        <div>
                                             <h6>{addReview ? "Your Image (optional)" : "Add Service Thumbnail"}</h6>
                                             <label id="upload-thumbnail-btn" htmlFor="thumbnail-upload">
                                                 {
@@ -177,7 +178,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                                     </div>
 
                                     <div className="col-md-4">
-                                        <label>{addReview ? "Your Review" : "Service Description"}</label><small> ({characters ? characters : 0}/250)</small>
+                                        <label className="textarea-label">{addReview ? "Your Review" : "Service Description"}</label><small> ({characters ? characters : 0}/250)</small>
                                         <textarea
                                             defaultValue={serviceUpdateId ? updatedService.serviceDescription : ""}
                                             onKeyUp={() => trigger("description")}
@@ -189,11 +190,12 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                                                     message: "It's Contains only 250 characters"
                                                 }
                                             })} cols="40" rows="5" placeholder="Write your description here..."></textarea>
+                                            <br />
                                         {errors.description && <small className="text-danger">{errors.description?.message}</small>}
                                     </div>
                                 </div>
                             </div>
-                            <button id="add-service-btn" type="submit">{addReview ? "Add Review" : serviceUpdateId ? "Update Service" : "Add Service"}</button>
+                            <div className="text-center"><button id="add-service-btn" type="submit">{addReview ? "Add Review" : serviceUpdateId ? "Update Service" : "Add Service"}</button></div>
                         </form>
                     </div>
                 </div>
