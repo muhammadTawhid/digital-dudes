@@ -1,7 +1,7 @@
 .form-container {
     background: #efefef93;
     border-radius: 10px;
-    width: 1020px;
+    width: 1000px;
     margin: 3em auto;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -39,7 +39,7 @@
 }
 
 .form-container textarea {
-    width: 330px;
+    width: 90%;
     height: 167px !important;
     border: none;
 }
@@ -82,18 +82,14 @@
 
  
 /* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
+@media (min-width: 300.98px) and (max-width: 767.98px) { 
     .actionPageForm-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
-        text-align: center;
     }
     .actionPageForm-div h2{
         font-size: 40px;
-    }
-    .form-container{
-        margin: 0 auto;
     }
     .form-container form{
         width: 100%;
@@ -102,10 +98,12 @@
     .form-container input{
         width: 100%;
     }
-    .form-container{
+    .form-container {
         width: 90%;
-        height: 600px;
+        height: 570px;
+        margin: 0 auto;
     }
+    
     .form-container h6{
         font-size: 16px;
         margin-top: 2em;
@@ -121,22 +119,73 @@
     }
 }  
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    
-}
-
     /* Medium devices (tablets, less than 992px)  */
 @media (min-width: 767.98px) and (max-width: 991.98px) { 
-    
+    .actionPageForm-div {
+        width: 100%;
+        position: fixed;
+        margin-top: 3em;
+    }
+    .actionPageForm-div h2 {
+        font-size: 40px;
+    }
+    .form-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form-container form {
+        width: 100%;
+    }
+    .form-container input{
+        width: 90%;
+    }
+
+    .form-container h6 {
+        font-size: 16px;
+        margin-top: 3em;
+    }
+    .form-container img {
+        display: none;
+    }
+    .form-container textarea{
+        width: 85%;
+    }
 }
 
     /* Large devices (desktops, less than 1200px)  */
 @media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    
+    .actionPageForm-div {
+        width: 100%;
+        position: fixed;
+        margin-top: 3em;
+    }
+    .actionPageForm-div h2 {
+        font-size: 40px;
+    }
+    .form-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .form-container input{
+        width: 90%;
+    }
+    .form-container h6 {
+        font-size: 16px;
+        margin-top: 3em;
+    }
+    .form-container img {
+        width: 200px;
+    }
+    .form-container textarea{
+        width: 85%;
+    }
 }
 
     /* X-Large devices (large desktops, less than 1400px)  */
-@media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
-    
+@media (min-width: 1199.98px) and (max-width: 2000px) {
+    .form-container form {
+        width: 100%;
+        margin: 0 auto;
+    }
 }

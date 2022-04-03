@@ -177,7 +177,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                                         </div>
                                     </div>
 
-                                    <div className="col-md-4">
+                                    <div className="col-md-6">
                                         <label className="textarea-label">{addReview ? "Your Review" : "Service Description"}</label><small> ({characters ? characters : 0}/250)</small>
                                         <textarea
                                             defaultValue={serviceUpdateId ? updatedService.serviceDescription : ""}

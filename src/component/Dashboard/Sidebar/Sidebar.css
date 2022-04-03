@@ -9,7 +9,7 @@
     background-size: cover;
     text-align: center;
     padding: 10px 0;
-    transition: 0.3s;
+    transition: all 0.3s;
     position: fixed;
     z-index: 10;
     border-top-right-radius: 15px;
@@ -24,7 +24,7 @@
     text-align: center;
     padding: 10px 0;
     transform: translateX(-210px);
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 .sidebar-header img {
