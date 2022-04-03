@@ -95,9 +95,10 @@
         width: 100%;
         margin: auto 0;
     }
-    .form-container input{
+    .form-container input, #upload-thumbnail-btn{
         width: 100%;
     }
+    
     .form-container {
         width: 90%;
         height: 570px;
