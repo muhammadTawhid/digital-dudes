@@ -55,7 +55,7 @@ const EditPricing = () => {
                 <div className="col-md-2">
                     <Sidebar />
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-10 editPricing-div">
                     <h1 className="brand-text text-center">Edit Pricing</h1>
                     <div className="row sidebar-row">
                         {

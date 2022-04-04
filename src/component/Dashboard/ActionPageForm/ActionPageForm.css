@@ -91,11 +91,11 @@
     .actionPageForm-div h2{
         font-size: 40px;
     }
-    .form-container form{
+    .form-container form {
         width: 100%;
         margin: auto 0;
     }
-    .form-container input, #upload-thumbnail-btn{
+    .form-container input, #upload-thumbnail-btn {
         width: 100%;
     }
     
