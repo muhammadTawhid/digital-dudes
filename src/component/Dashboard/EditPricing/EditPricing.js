@@ -60,7 +60,7 @@ const EditPricing = () => {
                     <div className="row sidebar-row">
                         {
                             pricing.map(data =>
-                                <div key={data._id} className="col-md-4 d-flex justify-content-center">
+                                <div key={data._id} className="col-md-4 d-flex justify-content-center editPricing-btn-div">
                                     <button onClick={() => handleUpdatePricing(data._id)} className={`${data.pricingTitle}-pricing pricing-type-btn`}>{data.pricingTitle}</button>
                                 </div>
                             )

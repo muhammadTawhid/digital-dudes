@@ -1,6 +1,6 @@
 .pricing-form {
     width: 400px;
-    height: 600px;
+    /* height: 600px; */
     margin: 1em auto;
     padding: 20px;
     text-align: center;
@@ -24,7 +24,7 @@
 }
 
 .pricing-form button {
-    width: 100%;
+    width: 60%;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
@@ -80,13 +80,17 @@
         font-size: 50px;
     }
     .pricing-form{
-        width: 300px;
+        width: 87%;
+        padding-bottom: 1em;
+    }
+    .pricing-form input{
+        width: 50%;
     }
     .pricing-type-btn{
         font-size: 15px;
-        padding: 5px 10px;
+        padding: 10px 15px;
     }
-    .col-md-4{
+    .editPricing-btn-div{
         width: 33%;
         flex: 0 0 auto;
     }
@@ -94,20 +98,90 @@
 
     /* Small devices (landscape phones, less than 768px)  */
 @media (min-width: 575.98px) and (max-width: 767.98px) { 
-    
+    .editPricing-div{
+        position: fixed;
+        margin-top: 3em;
+    }
+    .editPricing-div h1{
+        font-size: 60px;
+    }
+    .pricing-form{
+        width: 87%;
+        padding-bottom: 1em;
+    }
+    .pricing-form input{
+        width: 50%;
+    }
+    .pricing-type-btn{
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+    .editPricing-btn-div{
+        width: 33%;
+        flex: 0 0 auto;
+    }
 }
 
     /* Medium devices (tablets, less than 992px)  */
 @media (min-width: 767.98px) and (max-width: 991.98px) { 
-    
+    .editPricing-div{
+        width: 100%;
+        position: fixed;
+        margin-top: 3em;
+    }
+    .editPricing-div h1{
+        font-size: 60px;
+    }
+    .pricing-form{
+        width: 87%;
+        padding-bottom: 1em;
+    }
+    .pricing-form input{
+        width: 50%;
+    }
+    .pricing-type-btn{
+        padding: 15px 30px;
+    }
 }
 
     /* Large devices (desktops, less than 1200px)  */
 @media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    
+    .editPricing-div{
+        width: 100%;
+        position: fixed;
+    }
+    .editPricing-div h1{
+        font-size: 60px;
+    }
+    .pricing-form{
+        width: 87%;
+        padding-bottom: 1em;
+    }
+    .pricing-form input{
+        width: 50%;
+    }
+    .pricing-type-btn{
+        padding: 15px 30px;
+    }
 }
 
     /* X-Large devices (large desktops, less than 1400px)  */
 @media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
-    
+    /* .editPricing-div{
+        width: 100%;
+        position: fixed;
+    } */
+    .editPricing-div h1{
+        font-size: 60px;
+    }
+    .pricing-form{
+        width: 87%;
+        padding-bottom: 1em;
+    }
+    .pricing-form input{
+        width: 50%;
+    }
+    .pricing-type-btn{
+        padding: 15px 30px;
+    }
 }
