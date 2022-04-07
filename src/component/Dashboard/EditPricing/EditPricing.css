@@ -1,8 +1,7 @@
 .pricing-form {
-    width: 400px;
-    /* height: 600px; */
-    margin: 1em auto;
-    padding: 20px;
+    width: 87%;
+    margin: 1em auto 2em;
+    padding: 20px 0;
     text-align: center;
     background: #efefef93;
     border-radius: 10px;
@@ -16,6 +15,7 @@
 }
 
 .pricing-form input {
+    width: 50%;
     padding: 7px 10px;
     margin-top: 1em;
     border: none;
@@ -79,15 +79,8 @@
     .editPricing-div h1{
         font-size: 50px;
     }
-    .pricing-form{
-        width: 87%;
-        padding-bottom: 1em;
-    }
-    .pricing-form input{
-        width: 50%;
-    }
     .pricing-type-btn{
-        font-size: 15px;
+        font-size: 16px;
         padding: 10px 15px;
     }
     .editPricing-btn-div{
@@ -103,17 +96,10 @@
         margin-top: 3em;
     }
     .editPricing-div h1{
-        font-size: 60px;
-    }
-    .pricing-form{
-        width: 87%;
-        padding-bottom: 1em;
-    }
-    .pricing-form input{
-        width: 50%;
+        font-size: 50px;
     }
     .pricing-type-btn{
-        font-size: 15px;
+        font-size: 17px;
         padding: 15px 30px;
     }
     .editPricing-btn-div{
@@ -129,16 +115,6 @@
         position: fixed;
         margin-top: 3em;
     }
-    .editPricing-div h1{
-        font-size: 60px;
-    }
-    .pricing-form{
-        width: 87%;
-        padding-bottom: 1em;
-    }
-    .pricing-form input{
-        width: 50%;
-    }
     .pricing-type-btn{
         padding: 15px 30px;
     }
@@ -152,34 +128,6 @@
     }
     .editPricing-div h1{
         font-size: 60px;
-    }
-    .pricing-form{
-        width: 87%;
-        padding-bottom: 1em;
-    }
-    .pricing-form input{
-        width: 50%;
-    }
-    .pricing-type-btn{
-        padding: 15px 30px;
-    }
-}
-
-    /* X-Large devices (large desktops, less than 1400px)  */
-@media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
-    /* .editPricing-div{
-        width: 100%;
-        position: fixed;
-    } */
-    .editPricing-div h1{
-        font-size: 60px;
-    }
-    .pricing-form{
-        width: 87%;
-        padding-bottom: 1em;
-    }
-    .pricing-form input{
-        width: 50%;
     }
     .pricing-type-btn{
         padding: 15px 30px;
