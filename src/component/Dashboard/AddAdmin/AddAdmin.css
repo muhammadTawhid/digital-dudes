@@ -1,0 +1,80 @@
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 300.98px) and (max-width: 575.98px) { 
+    .addAdminInput-div input{
+        width: 95%;
+        margin: 13px auto 0px;
+    }
+    .addAdminInput-btn-div{
+        text-align: center;
+    }
+    .addAdminInput-err{
+        margin-left: 1em;
+    }
+    .addAdminInput-btn-div button{
+        width: 95%;
+        margin-top: 13px;
+    }
+}  
+
+    /* Small devices (landscape phones, less than 768px)  */
+@media (min-width: 575.98px) and (max-width: 767.98px) { 
+    .addAdminInput-div input{
+        width: 95%;
+        margin: 13px auto 0px;
+    }
+    .addAdminInput-btn-div{
+        text-align: center;
+    }
+    .addAdminInput-err{
+        margin-left: 1em;
+    }
+    .addAdminInput-btn-div button{
+        width: 95%;
+        margin-top: 13px;
+    }
+}
+
+    /* Medium devices (tablets, less than 992px)  */
+@media (min-width: 767.98px) and (max-width: 991.98px) { 
+    .addAdminInput-div input {
+        width: 95%;
+        margin: 0px auto;
+    }
+    .addAdminInput-btn-div {
+        text-align: start;
+    }
+    .addAdminInput-err {
+        margin-left: 1em;
+    }
+}
+
+    /* Large devices (desktops, less than 1200px)  */
+@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+    .addAdminInput-div input {
+        width: 95%;
+        margin: 0px auto;
+    }
+    .addAdminInput-btn-div {
+        text-align: center;
+    }
+    .addAdminInput-err {
+        margin-left: 1em;
+    }
+}
+
+    /* X-Large devices (large desktops, less than 1400px)  */
+@media (min-width: 991.98px) and (max-width: 2000px){
+    #addAdmin-row-div{
+        width: 95%;
+    }
+    .addAdminInput-div input {
+        width: 85%;
+        margin: 0px auto;
+    }
+    .addAdminInput-btn-div {
+        text-align: end;
+    }
+    .addAdminInput-err {
+        margin-left: 2em;
+    }
+}

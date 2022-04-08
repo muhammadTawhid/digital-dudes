@@ -81,10 +81,11 @@
  
 /* X-Small devices (portrait phones, less than 576px) */
 @media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .manageService-div{
+    .manageService-div {
         position: fixed;
         margin-top: 4em;
         padding: 0 .5em;
+        /* overflow-y: scroll; */
     }
     .manageService-div h1{
         font-size: 30px;

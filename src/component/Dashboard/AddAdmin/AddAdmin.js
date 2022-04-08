@@ -1,3 +1,4 @@
+import './AddAdmin.css';
 import React from 'react';
 import XMLParser from 'react-xml-parser';
 import axios from 'axios';
@@ -41,9 +42,9 @@ const AddAdmin = ({ setAdmins }) => {
         }
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="row sidebar-row">
-                <div className="col-md-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="container">
+            <div id="addAdmin-row-div" className="row sidebar-row">
+                <div className="col-md-5 addAdminInput-div">
                     <input className="form-control"
                         {...register("adminName", {
                             required: "This field is required",
@@ -54,10 +55,10 @@ const AddAdmin = ({ setAdmins }) => {
                         })}
                         onKeyUp={() => trigger("adminName")}
                         type="text" id="" placeholder="Admin name" />
-                    {errors.adminName && <small className="text-danger">{errors.adminName?.message}</small>}
+                    {errors.adminName && <small className="text-danger addAdminInput-err">{errors.adminName?.message}</small>}
                 </div>
-                <div className="col-md-5">
-                    <input className="form-control ms-4"
+                <div className="col-md-5 addAdminInput-div">
+                    <input className="form-control"
                         {...register("adminEmail", {
                             required: "This field is required",
                             pattern: {
@@ -67,10 +68,10 @@ const AddAdmin = ({ setAdmins }) => {
                         })}
                         onKeyUp={() => trigger("adminEmail")}
                         type="text" id="" placeholder="Admin email address" />
-                    {errors.adminEmail && <small className="text-danger ms-4">{errors.adminEmail?.message}</small>}
+                    {errors.adminEmail && <small className="text-danger addAdminInput-err">{errors.adminEmail?.message}</small>}
                 </div>
-                <div className="col-md-2 text-end pe-2">
-                    <button type="submit" className={`btn btn-success me-4 ${pending && "disabled"}`} >{
+                <div className="col-md-2 addAdminInput-btn-div">
+                    <button type="submit" className={`btn btn-success ${pending && "disabled"}`} >{
                         pending ? <span><Spinner
                             animation="border"
                             size="sm"
@@ -79,11 +80,8 @@ const AddAdmin = ({ setAdmins }) => {
                             className="me-2"
                         />Adding...</span> : "Add Admin"}</button>
                 </div>
-
             </div>
         </form>
-
-
     );
 };
 

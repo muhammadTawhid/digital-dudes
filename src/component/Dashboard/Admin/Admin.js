@@ -1,3 +1,4 @@
+import './Admin.css';
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import { Table } from 'react-bootstrap';
@@ -31,9 +32,10 @@ const Admin = () => {
             <div className="col-md-2">
                 <Sidebar />
             </div>
-            <div className="col-md-10 mb-5">
+            <div className="col-md-10 mb-5 adminsTable-div">
                 <h2 className="text-center brand-text">List of Admins</h2>
-                <Table hover className='container text-center '>
+                <div className="scrollable">
+                <Table hover className="container text-center admins-table">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -71,7 +73,8 @@ const Admin = () => {
                         }
                     </tbody>
                 </Table>
-                <AddAdmin setAdmins={setAdmins} />
+                </div>
+                    <AddAdmin setAdmins={setAdmins} />
             </div>
         </div>
 
