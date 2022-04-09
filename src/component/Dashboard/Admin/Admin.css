@@ -1,66 +1,72 @@
-
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .adminsTable-div{
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
+    .adminsTable-div {
         position: fixed;
         margin-top: 4em;
     }
-    .adminsTable-div h2{
+
+    .adminsTable-div h2 {
         font-size: 40px;
     }
-    .scrollable-admins-table{
-        width: 95%;
-        margin: 0 auto;
-        overflow-x: scroll;
-    }
-    .admins-table{
-        width: 1000px;
-    }
-}  
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    .adminsTable-div{
-        position: fixed;
-        margin-top: 4em;
-    }
-    .adminsTable-div h2{
-        font-size: 45px;
-    }
-    .scrollable-admins-table{
+    .scrollable-admins-table {
         width: 95%;
         margin: 0 auto;
         overflow-x: scroll;
     }
-    .admins-table{
+
+    .admins-table {
         width: 1000px;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-    .adminsTable-div{
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .adminsTable-div {
+        position: fixed;
+        margin-top: 4em;
+    }
+
+    .adminsTable-div h2 {
+        font-size: 45px;
+    }
+
+    .scrollable-admins-table {
+        width: 95%;
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+
+    .admins-table {
+        width: 1000px;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .adminsTable-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
     }
-    .adminsTable-div h2{
+
+    .adminsTable-div h2 {
         font-size: 50px;
     }
 }
 
-    /* Large devices (desktops, less than 1200px)  */
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    .adminsTable-div{
+/* Large devices */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+    .adminsTable-div {
         position: fixed;
         width: 100%;
         margin-top: 3em;
     }
 }
 
-    /* X-Large devices (large desktops, less than 1400px)  */
+/* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
-    .admins-table{
+    .admins-table {
         width: 95%;
     }
 }

@@ -22,7 +22,7 @@ const Footer = () => {
                                 </p>
                             </div>
 
-                            <div  id="footer-details-div" className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-part-div">
+                            <div id="footer-details-div" className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-part-div">
                                 <h4>
                                     Links
                                 </h4>

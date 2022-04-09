@@ -42,6 +42,7 @@
     width: 200px;
     border-radius: 10px;
 }
+
 .main-content {
     text-align: center;
 }
@@ -51,7 +52,7 @@
 }
 
 
-/* X-Small devices (portrait phones, less than 576px) */
+/* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .header-bottom-container {
         height: 800px;
@@ -76,7 +77,7 @@
     }
 }
 
-/* Small devices (landscape phones, less than 768px)*/
+/* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .header-bottom-container {
         height: 850px;
@@ -94,12 +95,13 @@
     .main-content {
         text-align: center;
     }
-    .main-content img{
-        width: 300px ;
+
+    .main-content img {
+        width: 300px;
     }
 }
 
-/* Medium devices (tablets, less than 992px)  */
+/* Medium devices */
 @media (min-width: 767.98px) and (max-width: 991.98px) {
     .header-bottom-container {
         height: 850px;
@@ -117,17 +119,14 @@
     .main-content {
         text-align: center;
     }
-    .main-content img{
-        width: 250px ;
+
+    .main-content img {
+        width: 250px;
     }
 }
 
-/* Large devices (desktops, less than 1200px)  */
+/* Large devices */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
-    /* .header-bottom-container {
-        height: 850px;
-    } */
-
     .header-bottom-container h1 {
         font-size: 18em;
         margin-top: -40px;
@@ -136,15 +135,17 @@
     .main-content {
         text-align: center;
     }
-    .main-content img{
-        width: 180px ;
+
+    .main-content img {
+        width: 180px;
     }
-    .main-content svg{
+
+    .main-content svg {
         transform: translateY(0);
     }
 }
 
-/* X-Large devices (large desktops, less than 1400px)  */
+/* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
     .header-bottom-container h1 {
         margin-top: -60px;
@@ -153,15 +154,17 @@
     .main-content {
         text-align: center;
     }
-    
-    .main-content h4{
+
+    .main-content h4 {
         font-size: 30px;
         font-weight: 600;
     }
-    .main-content img{
+
+    .main-content img {
         width: 220px;
     }
-    .main-content svg{
+
+    .main-content svg {
         transform: translateY(0);
     }
 }

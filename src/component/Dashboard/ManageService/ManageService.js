@@ -50,8 +50,8 @@ const ManageService = () => {
                                 <h4>{data.serviceName}</h4>
                                 <p>{data.serviceDescription}</p>
                                 <div className="btn-div">
-                                        <button className="me-5" onClick={() => setServiceUpdateId(data._id)}><FontAwesomeIcon icon={faEdit} /></button>
-                                        <button onClick={() => handleSetServiceId(data._id)}><FontAwesomeIcon icon={faTrash} /></button>
+                                    <button className="me-5" onClick={() => setServiceUpdateId(data._id)}><FontAwesomeIcon icon={faEdit} /></button>
+                                    <button onClick={() => handleSetServiceId(data._id)}><FontAwesomeIcon icon={faTrash} /></button>
                                 </div>
                             </div>
                         </div>

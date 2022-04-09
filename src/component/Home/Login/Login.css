@@ -130,45 +130,50 @@
     border: none;
 }
 
- 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
+
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
     .login-div {
         background-size: 100% 450px;
     }
-    .login-div::before{
+
+    .login-div::before {
         height: 1100px;
     }
-    .form-box{
+
+    .form-box {
         width: 330px;
     }
+
     .facebook-btn svg, .google-btn svg {
         transform: translateX(-25px);
     }
-}  
+}
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
     .login-div {
         background-size: 100% 520px;
     }
-    .login-div::before{
+
+    .login-div::before {
         height: 1100px;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-     .login-div::before{
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .login-div::before {
         height: 1100px;
     }
+
     .login-div {
         background-size: 100% 600px;
     }
 }
 
-    /* Large devices (desktops, less than 1200px)  */
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+/* Large devices */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
     .login-div {
         background-size: 100% 850px;
     }

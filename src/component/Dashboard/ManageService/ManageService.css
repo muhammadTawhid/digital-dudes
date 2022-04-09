@@ -31,17 +31,13 @@
 
 .manageService-card p {
     text-align: justify;
-    /* width: 365px; */
-    /* height: 48px; */
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     color: rgb(73, 73, 73);
 }
 
 .manageService-card button {
-    /* transform: translateX(120px) translateY(20px); */
     color: white;
-    /* margin: 0 30px; */
     font-size: 25px;
     padding: 5px 10px;
     background: transparent;
@@ -49,10 +45,11 @@
     display: none;
     transition: 0.3s;
 }
+
 .btn-div {
     transform: translateY(20px);
     width: 90% !important;
-    margin: 0 auto  ;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -78,77 +75,86 @@
 }
 
 
- 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
+
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
     .manageService-div {
         position: fixed;
         margin-top: 4em;
         padding: 0 .5em;
         /* overflow-y: scroll; */
     }
-    .manageService-div h1{
+
+    .manageService-div h1 {
         font-size: 30px;
     }
-    .manageService-card h4{
+
+    .manageService-card h4 {
         font-size: 20px;
     }
-    .manageService-card p{
+
+    .manageService-card p {
         text-align: left;
         font-size: 14px;
 
     }
-}  
+}
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    .manageService-div{
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .manageService-div {
         position: fixed;
         margin-top: 3em;
     }
-    .manageService-div h1{
+
+    .manageService-div h1 {
         font-size: 40px;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-    .manageService-div{
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .manageService-div {
         position: fixed;
         width: 100%;
         margin-top: 3em;
         padding: 1em;
     }
-    .manageService-div h1{
+
+    .manageService-div h1 {
         font-size: 50px;
     }
-    .manageService-card{
+
+    .manageService-card {
         width: 370px;
     }
-    .manageService-card p{
+
+    .manageService-card p {
         font-size: 15px;
     }
 }
 
-    /* Large devices (desktops, less than 1200px)  */
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    .manageService-div{
+/* Large devices */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+    .manageService-div {
         position: fixed;
         width: 100%;
         margin-top: 3em;
         padding: 1em;
     }
-    .manageService-card{
+
+    .manageService-card {
         width: 480px;
     }
-    .manageService-card p{
+
+    .manageService-card p {
         font-size: 15px;
     }
 }
 
-    /* X-Large devices (large desktops, less than 1400px)  */
+/* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
-    .manageService-div{
+    .manageService-div {
         padding: 0 1em;
     }
 }

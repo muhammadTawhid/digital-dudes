@@ -38,7 +38,7 @@
     font-size: 18px;
 }
 
-.payment-header button > span > svg {
+.payment-header button>span>svg {
     font-size: 30px;
     margin: 0 5px;
     color: #2d2d2d;
@@ -49,22 +49,26 @@
     color: #979696 !important;
 }
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .payment-form{
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
+    .payment-form {
         width: 93%;
     }
-    .payment-header{
+
+    .payment-header {
         width: 93%;
     }
-    .payment-header h1{
+
+    .payment-header h1 {
         font-size: 25px;
     }
-    .payment-header button > span{
+
+    .payment-header button>span {
         font-size: 14px;
     }
-    .payment-header button > span > svg {
+
+    .payment-header button>span>svg {
         font-size: 20px;
         margin: 0 3px;
     }
-}  
+}

@@ -43,42 +43,48 @@
     border-radius: 2px;
 }
 
- 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .notFound-container{
+
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
+    .notFound-container {
         padding: 40px;
     }
-    .notFound-container h1{
+
+    .notFound-container h1 {
         font-size: 120px;
     }
-    .notFound-container h2{
-        font-size: 25px;
-    }
-}  
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    .notFound-container{
-        padding: 40px;
-    }
-    .notFound-container h1{
-        font-size: 140px;
-    }
-    .notFound-container h2{
+    .notFound-container h2 {
         font-size: 25px;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-    .notFound-container{
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .notFound-container {
         padding: 40px;
     }
-    .notFound-container h1{
+
+    .notFound-container h1 {
+        font-size: 140px;
+    }
+
+    .notFound-container h2 {
+        font-size: 25px;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .notFound-container {
+        padding: 40px;
+    }
+
+    .notFound-container h1 {
         font-size: 160px;
     }
-    .notFound-container p{
+
+    .notFound-container p {
         width: 90%;
     }
 }

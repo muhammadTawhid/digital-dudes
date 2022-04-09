@@ -24,13 +24,13 @@ const Testimonial = () => {
             .then(res => setReviews(res.data))
     }, [])
 
-    console.log(matches,"match");
+    console.log(matches, "match");
 
     useEffect(() => {
         window
-        .matchMedia("(min-width: 300.98px)")
-        .addEventListener('change', e => setMatches( e.matches ));
-      }, []);
+            .matchMedia("(min-width: 300.98px)")
+            .addEventListener('change', e => setMatches(e.matches));
+    }, []);
 
 
     return (

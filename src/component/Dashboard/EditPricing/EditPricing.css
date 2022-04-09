@@ -69,79 +69,91 @@
 }
 
 
- 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .editPricing-div{
+
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
+    .editPricing-div {
         position: fixed;
         margin-top: 3em;
     }
-    .editPricing-div h1{
+
+    .editPricing-div h1 {
         font-size: 50px;
     }
-    .pricing-type-btn{
+
+    .pricing-type-btn {
         font-size: 16px;
         padding: 10px 15px;
     }
-    .editPricing-btn-div{
+
+    .editPricing-btn-div {
         width: 33%;
         flex: 0 0 auto;
     }
-    .editPricing-skeleton{
+
+    .editPricing-skeleton {
         width: 80px !important;
         height: 40px !important;
     }
-}  
+}
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    .editPricing-div{
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .editPricing-div {
         position: fixed;
         margin-top: 3em;
     }
-    .editPricing-div h1{
+
+    .editPricing-div h1 {
         font-size: 50px;
     }
-    .pricing-type-btn{
+
+    .pricing-type-btn {
         font-size: 17px;
         padding: 15px 30px;
     }
-    .editPricing-btn-div{
+
+    .editPricing-btn-div {
         width: 33%;
         flex: 0 0 auto;
     }
-    .editPricing-skeleton{
+
+    .editPricing-skeleton {
         width: 120px !important;
         height: 60px !important;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-    .editPricing-div{
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .editPricing-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
     }
-    .pricing-type-btn{
+
+    .pricing-type-btn {
         padding: 15px 30px;
     }
-    .editPricing-skeleton{
+
+    .editPricing-skeleton {
         width: 140px !important;
         height: 70px !important;
     }
 }
 
-    /* Large devices (desktops, less than 1200px)  */
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    .editPricing-div{
+/* Large devices */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+    .editPricing-div {
         width: 100%;
         position: fixed;
     }
-    .editPricing-div h1{
+
+    .editPricing-div h1 {
         font-size: 60px;
     }
-    .pricing-type-btn{
+
+    .pricing-type-btn {
         padding: 15px 30px;
     }
 }

@@ -37,29 +37,29 @@ const HeaderNavbar = () => {
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav"> <FontAwesomeIcon id="menuBar" icon={faBars} /><FontAwesomeIcon id="crossMark" icon={faTimes} /></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto text-white">
-                        <Nav.Link ><Link to="/">Home</Link></Nav.Link>
-                        <Nav.Link ><Link to={`/dashboard/${loggedInUser.admin ? "manageService" : "subscription"}`}>Dashboard</Link></Nav.Link>
-                        <Nav.Link ><LinkScroll to="pricing" spy={true} smooth={true} duration={800}>Pricing</LinkScroll></Nav.Link>
-                        <Nav.Link ><LinkScroll to="aboutUs" spy={true} smooth={true} duration={800}>About us</LinkScroll></Nav.Link>
-                        {loggedInUser.email ?
-                            <NavDropdown title={
-                                <div className="pull-left">
-                                    <img className="icon-image"
-                                        src={loggedInUser.imgUrl}
-                                        alt=""
-                                    />
-                                </div>
-                            } id="basic-nav-dropdown">
-                                <NavDropdown.Item><button onClick={handleLogOut} className="log-out">Log out</button></NavDropdown.Item>
-                            </NavDropdown>
-                            :
-                            <Nav.Link><Link to="/login">login</Link></Nav.Link>}
-                    </Nav>
+                        <Nav className="ms-auto text-white">
+                            <Nav.Link ><Link to="/">Home</Link></Nav.Link>
+                            <Nav.Link ><Link to={`/dashboard/${loggedInUser.admin ? "manageService" : "subscription"}`}>Dashboard</Link></Nav.Link>
+                            <Nav.Link ><LinkScroll to="pricing" spy={true} smooth={true} duration={800}>Pricing</LinkScroll></Nav.Link>
+                            <Nav.Link ><LinkScroll to="aboutUs" spy={true} smooth={true} duration={800}>About us</LinkScroll></Nav.Link>
+                            {loggedInUser.email ?
+                                <NavDropdown title={
+                                    <div className="pull-left">
+                                        <img className="icon-image"
+                                            src={loggedInUser.imgUrl}
+                                            alt=""
+                                        />
+                                    </div>
+                                } id="basic-nav-dropdown">
+                                    <NavDropdown.Item><button onClick={handleLogOut} className="log-out">Log out</button></NavDropdown.Item>
+                                </NavDropdown>
+                                :
+                                <Nav.Link><Link to="/login">login</Link></Nav.Link>}
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <button className={isSticky ? "scroll-top-btn" : "scroll-top-btn-hide"}><LinkScroll to="home" spy={true} smooth={true} duration={800} className="text-reset"><FontAwesomeIcon icon={faLongArrowAltUp} />
+            <button className={isSticky ? "scroll-top-btn" : "scroll-top-btn-hide"}><LinkScroll to="home" spy={true} smooth={true} duration={1000} className="text-reset"><FontAwesomeIcon icon={faLongArrowAltUp} />
             </LinkScroll></button>
         </Jump>
     );

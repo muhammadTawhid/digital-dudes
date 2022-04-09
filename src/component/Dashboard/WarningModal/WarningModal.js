@@ -13,7 +13,7 @@ const WarningModal = (props) => {
                 if (res) {
                     onHide();
                     axios.get('https://digital-dudes.herokuapp.com/services')
-                    .then(res => setServiceData(res.data))
+                        .then(res => setServiceData(res.data))
                 }
             })
     }

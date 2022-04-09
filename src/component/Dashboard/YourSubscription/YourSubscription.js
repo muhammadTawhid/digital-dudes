@@ -20,7 +20,7 @@ const YourSubscription = ({ yourSubscription, setYourSubscription }) => {
                 }
             })
     }
-    
+
     return (
         <div>
             {yourSubscription.paymentFor ? <div className="yourSubscription-div">
@@ -53,7 +53,7 @@ const YourSubscription = ({ yourSubscription, setYourSubscription }) => {
                 : yourSubscription?.paymentFor === undefined &&
                 <div className="yourSubscription-div">
                     <Skeleton className="subscriptionDetail-skeleton-h2" width={300} height={40} />
-                    <p><Skeleton  className="subscriptionDetail-skeleton-p" width={600} height={20} /></p>
+                    <p><Skeleton className="subscriptionDetail-skeleton-p" width={600} height={20} /></p>
                     <div className="subscriptionDetail-div subscriptionDetail-skeleton-div">
                         <div className="row d-flex justify-content-between">
                             <div className="col-md-6">

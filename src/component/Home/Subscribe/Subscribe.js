@@ -39,23 +39,7 @@ const Subscribe = () => {
                                 </form>
                             </div>
                         </div>
-
                     </div>
-                    // <div className="row">
-                    //     <div className="col-xl-7 col-lg-7">
-                    //         <div className="text">
-                    //             <h2>Subscribe for Newsletter</h2>
-                    //             <p>Manage Your Business With Us</p>
-                    //             <FontAwesomeIcon icon={faPaperPlane} />
-                    //         </div>
-                    //     </div>
-                    //     <div className="col-xl-5 col-lg-5">
-                    //         <form onSubmit={handleEmailSubmit}>
-                    //             <input type="email" name="" id="" placeholder="Email Address..." required />
-                    //             <button type="submit">Subscribe Now</button>
-                    //         </form>
-                    //     </div>
-                    // </div>
                 }
             </div>
         </Bounce>

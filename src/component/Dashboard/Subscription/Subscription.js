@@ -12,7 +12,6 @@ const Subscription = () => {
     const [yourSubscription, setYourSubscription] = useState([]);
     const [subscriptedUser, setSubscriptedUser] = useState([]);
 
-    console.log(yourSubscription, "uour")
     useEffect(() => {
         axios.get("https://digital-dudes.herokuapp.com/subscriptedUser")
             .then(res => {
@@ -22,7 +21,7 @@ const Subscription = () => {
 
     useEffect(() => {
         axios.get("https://digital-dudes.herokuapp.com/subscriptedUser/" + loggedInUser.email, {
-            headers: { authorization: sessionStorage.getItem("loggedInUserToken")}
+            headers: { authorization: sessionStorage.getItem("loggedInUserToken") }
         })
             .then(res => {
                 setYourSubscription(res.data)
@@ -31,19 +30,19 @@ const Subscription = () => {
 
 
     return (
-        <Row className="sidebar-row">
-            <Col xs={2} id="sidebar-wrapper">
+        <div className="row sidebar-row">
+            <div className="col-md-2 col-lg-2">
                 <Sidebar />
-            </Col>
-            <Col xs={10} id="page-content-wrapper" className="container subscription-div">
+            </div>
+            <div className="col-lg-10 container subscription-div">
                 <h2 className="brand-text text-center">{loggedInUser.admin ? <span>You have {subscriptedUser.length} subscripted users</span> : yourSubscription ? "Your Subscription" : <span>Hello, {loggedInUser.name}<br />You have no subscription yet :(</span>}</h2>
                 <div >
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
                         :
                         <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} />}
                 </div>
-            </Col>
-        </Row>
+            </div>
+        </div>
     );
 };
 

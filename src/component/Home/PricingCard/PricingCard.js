@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const PricingCard = (props) => {
 
     const { _id, pricingTitle, pricingValue, services } = props.data;
-    
+
     return (
         <div className="col-md-4 pricing-card">
             <h4>{pricingTitle}</h4>

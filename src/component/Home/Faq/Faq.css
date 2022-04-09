@@ -59,33 +59,33 @@
     transition: 0.5s;
 }
 
- 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .faq-div h2{
+
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
+    .faq-div h2 {
         font-size: 40px;
         margin-top: 1em;
     }
-}  
+}
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    .faq-div h2{
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .faq-div h2 {
         font-size: 50px;
         margin-top: 1em;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-    .faq-div h2{
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .faq-div h2 {
         margin-top: 1em;
     }
 }
 
-    /* Large devices (desktops, less than 1200px)  */
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
-    .faq-div h2{
+/* Large devices */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+    .faq-div h2 {
         font-size: 50px;
     }
 }

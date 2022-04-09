@@ -10,7 +10,7 @@ import { UserContext } from '../../../App';
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(true);
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-  console.log(sidebar,"sidebar");
+  console.log(sidebar, "sidebar");
   useEffect(() => {
     document.title = "Dashboard"
   }, []);

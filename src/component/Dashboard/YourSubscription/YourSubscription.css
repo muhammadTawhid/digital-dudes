@@ -52,56 +52,66 @@
 }
 
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) { 
-    .yourSubscription-div{
+/* X-Small devices */
+@media (min-width: 300.98px) and (max-width: 575.98px) {
+    .yourSubscription-div {
         width: 90%;
     }
-    .yourSubscription-div h2{
+
+    .yourSubscription-div h2 {
         font-size: 25px;
         margin: 0 0;
     }
-    .subscriptionDetail-div{
+
+    .subscriptionDetail-div {
         height: 300px;
     }
-    .subscriptionDetail-skeleton-h2{
+
+    .subscriptionDetail-skeleton-h2 {
         width: 60% !important;
     }
-    .subscriptionDetail-skeleton-p{   
+
+    .subscriptionDetail-skeleton-p {
         width: 85% !important;
     }
-    .subscriptionDetail-skeleton-div{
+
+    .subscriptionDetail-skeleton-div {
         height: 350px;
     }
 
-}  
+}
 
-    /* Small devices (landscape phones, less than 768px)  */
-@media (min-width: 575.98px) and (max-width: 767.98px) { 
-    .yourSubscription-div{
+/* Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .yourSubscription-div {
         width: 90%;
     }
-    .yourSubscription-div h2{
+
+    .yourSubscription-div h2 {
         font-size: 30px;
         margin: 0 0;
     }
-    .subscriptionDetail-div{
+
+    .subscriptionDetail-div {
         height: 300px;
     }
-    .subscriptionDetail-skeleton-p{   
+
+    .subscriptionDetail-skeleton-p {
         width: 85% !important;
     }
-    .subscriptionDetail-skeleton-div{
+
+    .subscriptionDetail-skeleton-div {
         height: 350px;
     }
 }
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
-    .yourSubscription-div{
+/* Medium devices */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .yourSubscription-div {
         width: 90%;
     }
-    .yourSubscription-div h2{
+
+    .yourSubscription-div h2 {
         font-size: 35px;
         margin: 0 0;
     }

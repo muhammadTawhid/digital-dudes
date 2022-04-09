@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const AddReview = () => {
     const [addReview, setAddReview] = useState(true)
-    
+
     return (
         <div className="row">
             <div className="col-lg-2">
