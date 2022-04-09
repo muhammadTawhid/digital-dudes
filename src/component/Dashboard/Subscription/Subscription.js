@@ -12,6 +12,7 @@ const Subscription = () => {
     const [yourSubscription, setYourSubscription] = useState([]);
     const [subscriptedUser, setSubscriptedUser] = useState([]);
 
+    console.log(yourSubscription, "uour")
     useEffect(() => {
         axios.get("https://digital-dudes.herokuapp.com/subscriptedUser")
             .then(res => {
@@ -21,7 +22,7 @@ const Subscription = () => {
 
     useEffect(() => {
         axios.get("https://digital-dudes.herokuapp.com/subscriptedUser/" + loggedInUser.email, {
-            headers: { authorization: sessionStorage.getItem("loggedInUserToken") }
+            headers: { authorization: sessionStorage.getItem("loggedInUserToken")}
         })
             .then(res => {
                 setYourSubscription(res.data)

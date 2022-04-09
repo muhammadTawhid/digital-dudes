@@ -50,3 +50,44 @@
     background-color: black;
     color: white;
 }
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 300.98px) and (max-width: 575.98px) { 
+    .yourSubscription-div{
+        width: 90%;
+    }
+    .yourSubscription-div h2{
+        font-size: 25px;
+        margin: 0 0;
+    }
+    .subscriptionDetail-div{
+        height: 300px;
+    }
+
+}  
+
+    /* Small devices (landscape phones, less than 768px)  */
+@media (min-width: 575.98px) and (max-width: 767.98px) { 
+    .yourSubscription-div{
+        width: 90%;
+    }
+    .yourSubscription-div h2{
+        font-size: 30px;
+        margin: 0 0;
+    }
+    .subscriptionDetail-div{
+        height: 300px;
+    }
+}
+
+    /* Medium devices (tablets, less than 992px)  */
+@media (min-width: 767.98px) and (max-width: 991.98px) { 
+    .yourSubscription-div{
+        width: 90%;
+    }
+    .yourSubscription-div h2{
+        font-size: 35px;
+        margin: 0 0;
+    }
+}
