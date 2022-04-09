@@ -1,3 +1,4 @@
+import './SubscriptedUser.css';
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
@@ -7,15 +8,15 @@ const SubscriptedUser = ({ subscriptedUser }) => {
     const skeletonData = ["1", "2", "3", "4", "5", "6"];
 
     return (
-        <div>
-            <table className="text-center table table-hover container">
+        <div className="scrollable-subscriptedUser-table">
+            <table className="text-center table table-hover containe">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Subscription Type</th>
-                        <th>Expiration</th>
+                        <th className="table-heading">#</th>
+                        <th className="table-heading">Name</th>
+                        <th className="table-heading">Email</th>
+                        <th className="table-heading"><span id="subscription-text">Subscription</span> Type</th>
+                        <th className="table-heading">Expiration</th>
                     </tr>
                 </thead>
                 <tbody>

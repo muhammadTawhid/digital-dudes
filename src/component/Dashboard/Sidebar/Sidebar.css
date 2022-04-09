@@ -80,7 +80,10 @@
 
 
 /* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 575.98px) {
+@media (min-width: 300.98px) and (max-width: 1199.98px) {
+    .sidebar-footer button:hover{
+        border-bottom-right-radius: 5px;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px)  */

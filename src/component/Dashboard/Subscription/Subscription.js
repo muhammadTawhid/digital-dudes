@@ -1,5 +1,6 @@
-import axios from 'axios';
+import './Subscription.css';
 import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import Sidebar from '../Sidebar/Sidebar';
 import SubscriptedUser from '../SubscriptedUser/SubscriptedUser';
@@ -33,7 +34,7 @@ const Subscription = () => {
             <Col xs={2} id="sidebar-wrapper">
                 <Sidebar />
             </Col>
-            <Col xs={10} id="page-content-wrapper" className="container">
+            <Col xs={10} id="page-content-wrapper" className="container subscription-div">
                 <h2 className="brand-text text-center">{loggedInUser.admin ? <span>You have {subscriptedUser.length} subscripted users</span> : yourSubscription ? "Your Subscription" : <span>Hello, {loggedInUser.name}<br />You have no subscription yet :(</span>}</h2>
                 <div >
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
