@@ -38,7 +38,15 @@ const Payment = () => {
                         <h1>Set up your payment</h1>
                         <p>Your membership starts as soon as you set up payment.</p>
                         <h6>No commitments. <br />Cancel subscription anytime.</h6>
-                        <button onClick={() => setPaymentForm(true)}>Credit or Debit Card <FontAwesomeIcon icon={faCcVisa} /><FontAwesomeIcon icon={faCcMastercard} /><FontAwesomeIcon icon={faCcAmazonPay} /><FontAwesomeIcon className="angle-icon" icon={faAngleRight} /></button>
+                        <button onClick={() => setPaymentForm(true)}>
+                            <span className="row">
+                            Credit or Debit Card
+                            <FontAwesomeIcon icon={faCcVisa} />
+                            <FontAwesomeIcon icon={faCcMastercard} />
+                            <FontAwesomeIcon icon={faCcAmazonPay} />
+                            <FontAwesomeIcon className="angle-icon" icon={faAngleRight} />
+                            </span>
+                        </button>
                     </div>
                 }
                 <Footer />

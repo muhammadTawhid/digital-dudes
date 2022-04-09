@@ -1,0 +1,13 @@
+/* X-Small to Large devices*/
+@media (min-width: 300.98px) and (max-width: 1199.98px) { 
+    .addReview-div{
+        position: fixed;
+    }
+}  
+
+    /* X-Large devices */
+@media (min-width: 1199.98px) and (max-width: 2000px) {
+    .addReview-div{
+        padding: 0 1em;
+    }
+}

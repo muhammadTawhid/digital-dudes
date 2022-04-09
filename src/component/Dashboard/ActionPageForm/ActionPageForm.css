@@ -24,7 +24,7 @@
     font-weight: 600;
 }
 
-.form-container h6{
+.form-container h6 {
     font-size: 16px;
     margin-top: 3.7em;
 }
@@ -80,56 +80,64 @@
 }
 
 
- 
+
 /* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300.98px) and (max-width: 767.98px) { 
+@media (min-width: 300.98px) and (max-width: 767.98px) {
     .actionPageForm-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
     }
-    .actionPageForm-div h2{
+
+    .actionPageForm-div h2 {
         font-size: 40px;
     }
+
     .form-container form {
         width: 100%;
         margin: auto 0;
     }
+
     .form-container input, #upload-thumbnail-btn {
         width: 100%;
     }
-    
+
     .form-container {
         width: 90%;
         height: 570px;
         margin: 0 auto;
     }
-    
-    .form-container h6{
+
+    .form-container h6 {
         font-size: 16px;
         margin-top: 2em;
     }
-    .textarea-label{
+
+    .textarea-label {
         margin-top: 2em;
     }
-    .form-container img{
+
+    .form-container img {
         display: none;
     }
-    .form-container textarea{
+
+    .form-container textarea {
         width: 100%;
     }
-}  
+}
 
-    /* Medium devices (tablets, less than 992px)  */
-@media (min-width: 767.98px) and (max-width: 991.98px) { 
+/* Medium devices (tablets, less than 992px)  */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
     .actionPageForm-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
     }
+
     .actionPageForm-div h2 {
         font-size: 40px;
     }
+
     .form-container {
         width: 90%;
         margin: 0 auto;
@@ -138,7 +146,8 @@
     .form-container form {
         width: 100%;
     }
-    .form-container input{
+
+    .form-container input {
         width: 90%;
     }
 
@@ -146,44 +155,52 @@
         font-size: 16px;
         margin-top: 3em;
     }
+
     .form-container img {
         display: none;
     }
-    .form-container textarea{
+
+    .form-container textarea {
         width: 85%;
     }
 }
 
-    /* Large devices (desktops, less than 1200px)  */
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+/* Large devices (desktops, less than 1200px)  */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
     .actionPageForm-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
     }
+
     .actionPageForm-div h2 {
         font-size: 40px;
     }
+
     .form-container {
         width: 90%;
         margin: 0 auto;
     }
-    .form-container input{
+
+    .form-container input {
         width: 90%;
     }
+
     .form-container h6 {
         font-size: 16px;
         margin-top: 3em;
     }
+
     .form-container img {
         width: 200px;
     }
-    .form-container textarea{
+
+    .form-container textarea {
         width: 85%;
     }
 }
 
-    /* X-Large devices (large desktops, less than 1400px)  */
+/* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
     .form-container form {
         width: 100%;

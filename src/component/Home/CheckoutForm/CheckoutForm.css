@@ -24,5 +24,15 @@
   font-size: 20px;
   font-weight: 600;
   transition: 0.3s;
-
 }
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 300.98px) and (max-width: 575.98px) { 
+    .payment-form-container h1{
+      font-size: 25px;
+    }
+    .payment-form-container button{
+      font-size: 16px;
+    }
+}  
