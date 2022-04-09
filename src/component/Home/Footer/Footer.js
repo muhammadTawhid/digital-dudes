@@ -18,11 +18,11 @@ const Footer = () => {
                                     Our Company
                                 </h4>
                                 <p>
-                                    We have ~130 full-time employees, manage $100M+ in annual spend, optimize thousands of web pages, send thousands of emails/texts/chats and analyze hundreds of thousands of data points each year.
+                                    We have ~130 full-time employees, manage $100M+ in annual spend, optimize thousands of web pages, <span id="company-footer-details">send thousands of emails/texts/chats and analyze hundreds of thousands of data points each year.</span>
                                 </p>
                             </div>
 
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div  id="footer-details-div" className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-part-div">
                                 <h4>
                                     Links
                                 </h4>
@@ -40,7 +40,7 @@ const Footer = () => {
                                 </p>
                             </div>
 
-                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-part-div">
                                 <h4>
                                     Help
                                 </h4>
@@ -58,7 +58,7 @@ const Footer = () => {
                                 </p>
                             </div>
 
-                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer-part-div">
                                 <h4>
                                     Contact Us
                                 </h4>

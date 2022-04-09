@@ -70,12 +70,16 @@
         text-align: center !important;
         align-items: center;
     }
+    .footer-part-div p{
+        text-align: center;
+    }
     .footer-bottom-section{
         height: 100%;
     }
     .footer-bottom-section svg{
         margin-top: 15px;
     }
+
 }  
 
     /* Small devices (landscape phones, less than 768px)  */
@@ -84,6 +88,9 @@
         height: 100%;
         text-align: center !important;
         align-items: center;
+    }
+    .footer-part-div p{
+        text-align: center;
     }
     .footer-bottom-section{
         height: 100%;
@@ -105,6 +112,15 @@
     }
     .footer-bottom-section svg{
         margin-top: 15px;
+    }
+    #footer-details-div{
+        text-align: center;
+    }
+    #footer-details-div p{
+        text-align: center;
+    }
+    #company-footer-details{
+        display: none;
     }
 }
 

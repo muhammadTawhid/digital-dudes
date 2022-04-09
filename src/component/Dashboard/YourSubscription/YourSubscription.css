@@ -64,6 +64,15 @@
     .subscriptionDetail-div{
         height: 300px;
     }
+    .subscriptionDetail-skeleton-h2{
+        width: 60% !important;
+    }
+    .subscriptionDetail-skeleton-p{   
+        width: 85% !important;
+    }
+    .subscriptionDetail-skeleton-div{
+        height: 350px;
+    }
 
 }  
 
@@ -78,6 +87,12 @@
     }
     .subscriptionDetail-div{
         height: 300px;
+    }
+    .subscriptionDetail-skeleton-p{   
+        width: 85% !important;
+    }
+    .subscriptionDetail-skeleton-div{
+        height: 350px;
     }
 }
 

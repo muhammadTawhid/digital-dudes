@@ -68,7 +68,7 @@ const EditPricing = () => {
                         {pricing[0] === undefined &&
                             skeletonData.map(data =>
                                 <div key={data} className="col-md-4 d-flex justify-content-center editPricing-btn-div">
-                                    <Skeleton width={180} height={70} />
+                                    <Skeleton className="editPricing-skeleton" width={180} height={70} />
                                 </div>
                             )
                         }
