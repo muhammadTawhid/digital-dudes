@@ -36,7 +36,7 @@ const Sidebar = () => {
               </Link>
             </div>
             <div className="">
-              <Link to="/dashboard/addService">
+              <Link to="/dashboard/service/addService">
                 <button className="d-flex justify-content-around"><span><FontAwesomeIcon icon={faFolderPlus} /></span> <span>Add Service</span></button>
               </Link>
             </div>

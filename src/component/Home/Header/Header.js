@@ -6,7 +6,7 @@ import HeaderBottom from "../HeaderBottom/HeaderBottom";
 
 const Header = () => {
     return (
-        <div id="home">
+        <div>
             <div className="header-bg">
                 <HeaderNavbar />
                 <div>

@@ -1,6 +1,5 @@
 import './PricingCard.css';
 import React from 'react';
-import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -21,7 +20,7 @@ const PricingCard = (props) => {
                 )
             }
             <Link to={`payment/${_id}`}>
-                {_id ? <button className="brand-btn">Choose Now</button> : <Skeleton />}
+                <button className="brand-btn">Choose Now</button>
             </Link>
         </div>
     );

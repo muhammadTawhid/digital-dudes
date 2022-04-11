@@ -4,18 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import Fade from 'react-reveal/Fade';
 
-const SuccessNotify = ({ setServiceUpdateId, successNotify, setSuccessNotify }) => {
-
-    const hideNotify = () => {
-        setSuccessNotify(false)
-        setServiceUpdateId(null)
-    }
+const SuccessNotify = ({ successNotify, setSuccessNotify }) => {
 
     return (
         <Fade bottom when={successNotify}>
             <Row className="d-flex justify-content-center">
                 <Col xs={4}>
-                    <Toast onClose={hideNotify} show={successNotify} delay={3000} bg="success text-white text-center" autohide>
+                    <Toast onClose={() => setSuccessNotify(false)} show={successNotify} delay={3000} bg="success text-white text-center" autohide>
                         <Toast.Header className="text-dark">
                             <FontAwesomeIcon className="rounded me-1 text-success" icon={faCheckCircle} />
                             <strong className="me-auto">Success</strong>

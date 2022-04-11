@@ -9,16 +9,19 @@ import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import addImg from '../../../images/sideImg1.jpg';
 import editImg from '../../../images/sideImg2.jpg';
 import SuccessNotify from '../SuccessNotify/SuccessNotify';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
-const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, addReview, setAddReview }) => {
-
+const ActionPageForm = ({ addReview, setAddReview }) => {
     const [characters, setCharacters] = useState(null);
     const [successNotify, setSuccessNotify] = useState(false);
     const [imgUploading, setImgUploading] = useState(false);
     const [imgUrl, setImgUrl] = useState(null);
     const [updatedService, setUpdatedService] = useState([])
+
     const { register, handleSubmit, trigger, formState: { errors } } = useForm();
+    const { serviceUpdateId } = useParams();
+    const history = useNavigate();
 
     //counting character on text area
     const handleCountCharacter = e => {
@@ -28,13 +31,14 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
 
     //getting updating service by id
     useEffect(() => {
+        setUpdatedService([]);
         if (serviceUpdateId) {
             axios.get('https://digital-dudes.herokuapp.com/serviceById/' + serviceUpdateId)
                 .then(res => setUpdatedService(res.data))
         }
     }, [serviceUpdateId])
 
-    // getting service img hosted url
+    // getting acton img hosted url
     const uploadImg = e => {
         const newImgData = new FormData();
         newImgData.set("key", "be8a4cc0a70c10d0afc35bcd7b9def3d")
@@ -69,9 +73,8 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
             axios.post('https://digital-dudes.herokuapp.com/addService', newService)
                 .then(function (response) {
                     if (response) {
-                        axios.get('https://digital-dudes.herokuapp.com/services')
-                            .then(res => setServiceData(res.data))
                         setSuccessNotify(true)
+                        history("/dashboard/manageService")
                     }
                 })
                 .catch(function (error) {
@@ -84,9 +87,8 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
             axios.patch('https://digital-dudes.herokuapp.com/updateService/' + serviceUpdateId, newService)
                 .then(function (response) {
                     if (response) {
-                        axios.get('https://digital-dudes.herokuapp.com/services')
-                            .then(res => setServiceData(res.data))
                         setSuccessNotify(true)
+                        history("/dashboard/manageService")
                     }
                 })
                 .catch(function (error) {
@@ -100,7 +102,7 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
                 .then(function (response) {
                     if (response) {
                         axios.get('https://digital-dudes.herokuapp.com/reviews')
-                            .then(res => setAddReview(res.data)) //setReview
+                            .then(res => setAddReview(res.data))
                         setSuccessNotify(true)
                     }
                 })
@@ -116,12 +118,12 @@ const ActionPageForm = ({ serviceUpdateId, setServiceUpdateId, setServiceData, a
     return (
 
         <div className="row sidebar-row">
-            {addReview || serviceUpdateId ? "" : <div className="col-md-2">
+            {addReview ? "" : <div className="col-md-2">
                 <Sidebar />
             </div>}
             <div className="col-md-10 actionPageForm-div">
                 <h2 className="brand-text text-center">{addReview ? "Add Review" : serviceUpdateId ? "Edit Service" : "Add Service"}</h2>
-                <SuccessNotify setServiceUpdateId={setServiceUpdateId} setSuccessNotify={setSuccessNotify} successNotify={successNotify} />
+                <SuccessNotify setSuccessNotify={setSuccessNotify} successNotify={successNotify} />
                 <div className="form-container d-flex">
                     <div>
                         <img src={serviceUpdateId ? editImg : addImg} alt="" />

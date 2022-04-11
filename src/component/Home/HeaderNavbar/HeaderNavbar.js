@@ -31,7 +31,7 @@ const HeaderNavbar = () => {
 
     return (
         <Jump top>
-            <Navbar className="navbar" expand="lg">
+            <Navbar id="home" className="navbar" expand="lg">
                 <Container>
                     <Navbar.Brand><Link to="/"><img style={{ width: "100px" }} src={logo} alt="" /></Link></Navbar.Brand>
 

@@ -18,7 +18,7 @@ import {
     GoogleAuthProvider,
     FacebookAuthProvider,
 } from "firebase/auth";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import HeaderNavbar from "../HeaderNavbar/HeaderNavbar";
 import Footer from "../Footer/Footer";
 import axios from "axios";
@@ -49,8 +49,6 @@ const Login = () => {
     const [signedInError, setSignedInError] = useState(initialState);
 
     const history = useNavigate();
-    const location = useLocation();
-    const { from } = location.state || { from: { pathname: "/" } };
 
     useEffect(() => {
         document.title = "Login"
@@ -115,7 +113,6 @@ const Login = () => {
                     newSignInMessage.signInSuccess = "Login Successful";
                     newSignInMessage.signInError = "";
                     setSignedInError(newSignInMessage);
-                    // history.replace(from);
                     handleGetIdToken();
                 })
                 .catch((error) => {
@@ -137,7 +134,6 @@ const Login = () => {
                 const user = result.user;
                 setUserInfo(user);
                 handleGetIdToken();
-                // history.replace(from);
             })
             .catch((error) => {
                 console.log(error);
@@ -152,7 +148,6 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setUserInfo(user);
-                // history.replace(from);
                 handleGetIdToken();
                 console.log(user, "facebook sign up success");
             })
@@ -166,7 +161,6 @@ const Login = () => {
         getAuth().currentUser.getIdToken(true)
             .then(function (idToken) {
                 sessionStorage.setItem("loggedInUserToken", idToken)
-                history.replace(from);
             })
             .catch(function (error) {
                 console.log(error);

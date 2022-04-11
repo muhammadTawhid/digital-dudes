@@ -27,7 +27,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="payment/:pricingId" element={<PrivetRoute><Payment /></PrivetRoute>} />
-          <Route path="/dashboard/addService" element={<PrivetRoute><ActionPageForm /></PrivetRoute>} />
+          <Route path="/dashboard/service/editService/:serviceUpdateId" element={<PrivetRoute><ActionPageForm /></PrivetRoute>} />
+          <Route path="/dashboard/service/addService" element={<PrivetRoute><ActionPageForm /></PrivetRoute>} />
           <Route path="/dashboard/manageService" element={<PrivetRoute><ManageService /></PrivetRoute>} />
           <Route path="/dashboard/editPricing" element={<PrivetRoute><EditPricing /></PrivetRoute>} />
           <Route path="/dashboard/addAdmin" element={<PrivetRoute><Admin /></PrivetRoute>} />
