@@ -17,7 +17,8 @@ import PrivetRoute from './component/Home/PrivetRoute/PrivetRoute';
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({ name: "", email: "", imgUrl: "", admin: null })
+  const [loggedInUser, setLoggedInUser] = useState({ name: "tanjim", email: "sonda1@gmail.com", imgUrl: "https://i.ibb.co/WKjYBgg/user-Avatar.png", admin: false })
+  // const [loggedInUser, setLoggedInUser] = useState({ name: "", email: "", imgUrl: "", admin: null })
   console.log(loggedInUser)
 
   return (

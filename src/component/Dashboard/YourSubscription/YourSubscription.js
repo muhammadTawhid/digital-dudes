@@ -50,7 +50,7 @@ const YourSubscription = ({ yourSubscription, setYourSubscription }) => {
                     </div>
                 </div>
             </div>
-                : yourSubscription?.paymentFor === undefined &&
+                : yourSubscription &&
                 <div className="yourSubscription-div">
                     <Skeleton className="subscriptionDetail-skeleton-h2" width={300} height={40} />
                     <p><Skeleton className="subscriptionDetail-skeleton-p" width={600} height={20} /></p>

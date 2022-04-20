@@ -33,8 +33,8 @@ const ManageService = () => {
     }
 
     return (
-        <div className="row sidebar-row">
-            <div className="col-md-2">
+        <div className="row">
+            <div className="col-md-2 sidebar-col">
                 <Sidebar />
             </div>
             <div className="col-md-10 manageService-div">

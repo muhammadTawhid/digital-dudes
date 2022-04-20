@@ -51,7 +51,10 @@ const HeaderNavbar = () => {
                                         />
                                     </div>
                                 } id="basic-nav-dropdown">
-                                    <NavDropdown.Item><button onClick={handleLogOut} className="log-out">Log out</button></NavDropdown.Item>
+                                        <p className="text-center"><b>{loggedInUser.name}</b></p>
+                                    <NavDropdown.Item>
+                                        <button onClick={handleLogOut} className="log-out">Log out</button>
+                                    </NavDropdown.Item>
                                 </NavDropdown>
                                 :
                                 <Nav.Link><Link to="/login">login</Link></Nav.Link>}

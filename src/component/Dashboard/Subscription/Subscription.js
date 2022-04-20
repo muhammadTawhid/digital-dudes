@@ -1,7 +1,7 @@
 import './Subscription.css';
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { Col, Row } from 'react-bootstrap';
+import warningSad from '../../../images/warning-sad.png';
 import Sidebar from '../Sidebar/Sidebar';
 import SubscriptedUser from '../SubscriptedUser/SubscriptedUser';
 import YourSubscription from '../YourSubscription/YourSubscription';
@@ -35,11 +35,26 @@ const Subscription = () => {
                 <Sidebar />
             </div>
             <div className="col-lg-10 container subscription-div">
-                <h2 className="brand-text text-center">{loggedInUser.admin ? <span>You have {subscriptedUser.length} subscripted users</span> : yourSubscription ? "Your Subscription" : <span>Hello, {loggedInUser.name}<br />You have no subscription yet :(</span>}</h2>
+                {/* <h2 className="brand-text text-center">{loggedInUser.admin ? <span>You have {subscriptedUser.length} subscripted users</span> : yourSubscription ? "Your Subscription" : <span>Hello, {loggedInUser.name}<br />You have no subscription yet :(</span>}</h2> */}
+                <div>
+                    {
+                        loggedInUser.admin ?
+                            <h2 className="brand-text text-center">You have {subscriptedUser.length} subscripted users </h2>
+                            :
+                            yourSubscription.length ? <h2 className="brand-text text-center">Your Subscription</h2>
+                                :
+                                yourSubscription !== true &&
+                                <div>
+                                    <h2 className="brand-text text-center">Hello, {loggedInUser.name}</h2>
+                                    <h3>You have no subscription yet</h3>
+                                    <img className="text-center" src={warningSad} alt="" />
+                                </div>
+                    }
+                </div>
                 <div >
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
                         :
-                        <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} />}
+                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} />}
                 </div>
             </div>
         </div>

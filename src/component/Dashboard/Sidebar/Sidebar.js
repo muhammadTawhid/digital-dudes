@@ -19,7 +19,7 @@ const Sidebar = () => {
     setLoggedInUser("")
   }
   return (
-    <div>
+
       <div className={sidebar ? "sidebar-on" : " sidebar-off"}>
         <div className="sidebar-header">
           <Link to="/">
@@ -73,7 +73,7 @@ const Sidebar = () => {
           <button id={loggedInUser.admin ? "" : "nonAdminButton"} onClick={handleLogOut}><FontAwesomeIcon icon={faSignOutAlt} /> Log Out</button>
         </div>
       </div>
-    </div>
+
   );
 };
 
