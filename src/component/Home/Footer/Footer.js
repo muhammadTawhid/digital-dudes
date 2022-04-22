@@ -18,7 +18,7 @@ const Footer = () => {
                                     Our Company
                                 </h4>
                                 <p>
-                                    We have ~130 full-time employees, manage $100M+ in annual spend, optimize thousands of web pages, <span id="company-footer-details">send thousands of emails/texts/chats and analyze hundreds of thousands of data points each year.</span>
+                                    We have ~130 full-time employees, manage $100M+ in annual spend, optimize thousands of web pages<span id="company-footer-details">, send thousands of emails/texts/chats and analyze hundreds of thousands of data points each year.</span>
                                 </p>
                             </div>
 
@@ -76,12 +76,12 @@ const Footer = () => {
                 <section
                     className=" row  footer-bottom-section d-flex align-items-center"
                 >
-                    <div className="col-sm-12 col-md-9">
+                    <div className="col-sm-12 col-md-8 col-lg-9 footer-bottom-section-right-div">
                         © {(new Date().getFullYear())} Copyright:
-                        <a className="text-reset fw-bold" href="https://digital-dudes.web.app/"> DigitalDudes.com</a>
+                        <a className="text-reset fw-bold" href="https://digital-dudes-agency.web.app/"> DigitalDudes.com</a>
                     </div>
 
-                    <div className="col-sm-12 col-md-3">
+                    <div className="col-sm-12 col-md-4 col-lg-3 footer-bottom-section-left-div">
                         <a href="https://twitter.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
                         <a href="https://web.facebook.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
                         <a href="https://www.pinterest.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faPinterest} /></a>

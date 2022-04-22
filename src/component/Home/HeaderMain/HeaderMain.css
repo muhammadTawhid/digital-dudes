@@ -1,5 +1,9 @@
 .headerMain-container {
     color: white;
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    /* background-color: aquamarine; */
 }
 
 .headerMain-container h1 {

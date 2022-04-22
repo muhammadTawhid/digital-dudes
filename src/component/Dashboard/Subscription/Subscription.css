@@ -1,16 +1,13 @@
-.subscription-div {
-    text-align: center;
-}
 .subscription-div img{
     width: 50%;
 }
+
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .subscription-div {
         width: 100%;
         position: fixed;
         margin-top: 3em;
-        text-align: center;
     }
     .subscription-div img {
         width: 70%;

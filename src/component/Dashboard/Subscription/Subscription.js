@@ -12,6 +12,7 @@ const Subscription = () => {
     const [yourSubscription, setYourSubscription] = useState([]);
     const [subscriptedUser, setSubscriptedUser] = useState([]);
 
+    console.log(yourSubscription)
     useEffect(() => {
         axios.get("https://digital-dudes.herokuapp.com/subscriptedUser")
             .then(res => {
@@ -41,20 +42,21 @@ const Subscription = () => {
                         loggedInUser.admin ?
                             <h2 className="brand-text text-center">You have {subscriptedUser.length} subscripted users </h2>
                             :
-                            yourSubscription.length ? <h2 className="brand-text text-center">Your Subscription</h2>
+                            yourSubscription._id ? <h2 className="brand-text text-center">Your Subscription</h2>
                                 :
-                                yourSubscription !== true &&
-                                <div>
+                                yourSubscription._id === undefined &&
+                                <div className="text-center">
                                     <h2 className="brand-text text-center">Hello, {loggedInUser.name}</h2>
                                     <h3>You have no subscription yet</h3>
                                     <img className="text-center" src={warningSad} alt="" />
                                 </div>
                     }
                 </div>
-                <div >
+                <div>
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
                         :
-                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} />}
+                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} />
+                    }
                 </div>
             </div>
         </div>

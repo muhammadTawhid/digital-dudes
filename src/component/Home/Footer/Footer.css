@@ -62,6 +62,11 @@
     margin-right: 10px;
 }
 
+.footer-bottom-section-right-div a{
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
@@ -118,6 +123,14 @@
         height: 100%;
     }
 
+    .footer-bottom-section-right-div {
+        text-align: start;
+    }
+
+    .footer-bottom-section-left-div {
+        text-align: end;
+    }
+
     .footer-bottom-section svg {
         margin-top: 15px;
     }
@@ -132,5 +145,16 @@
 
     #company-footer-details {
         display: none;
+    }
+}
+
+/* Large devices */
+@media (min-width: 991.98px) and (max-width: 2000px) {
+    .footer-bottom-section-right-div {
+        text-align: start;
+    }
+
+    .footer-bottom-section-left-div {
+        text-align: end;
     }
 }

@@ -7,7 +7,8 @@ import { faFacebook, faSnapchat, faTwitter, faPinterest } from '@fortawesome/fre
 
 const HeaderMain = () => {
     return (
-        <div className="headerMain-container container">
+        <div className="container">
+            <div className="headerMain-container">
             <div className="row headerMain-container-div">
                 <div className="col-md-8 col-lg-8 ">
                     <h1>
@@ -24,6 +25,7 @@ const HeaderMain = () => {
                     <a href="https://www.snapchat.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faSnapchat} /></a>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
