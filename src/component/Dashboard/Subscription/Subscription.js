@@ -11,6 +11,7 @@ const Subscription = () => {
     const [loggedInUser] = useContext(UserContext);
     const [yourSubscription, setYourSubscription] = useState([]);
     const [subscriptedUser, setSubscriptedUser] = useState([]);
+    const [isLoding, setIsLoding] = useState(true);
 
     console.log(yourSubscription)
     useEffect(() => {
@@ -26,6 +27,7 @@ const Subscription = () => {
         })
             .then(res => {
                 setYourSubscription(res.data)
+                setIsLoding(false)
             })
     }, [])
 
@@ -38,24 +40,26 @@ const Subscription = () => {
             <div className="col-lg-10 container subscription-div">
                 {/* <h2 className="brand-text text-center">{loggedInUser.admin ? <span>You have {subscriptedUser.length} subscripted users</span> : yourSubscription ? "Your Subscription" : <span>Hello, {loggedInUser.name}<br />You have no subscription yet :(</span>}</h2> */}
                 <div>
+
                     {
-                        loggedInUser.admin ?
+                        !isLoding &&
+                        (loggedInUser.admin ?
                             <h2 className="brand-text text-center">You have {subscriptedUser.length} subscripted users </h2>
                             :
                             yourSubscription._id ? <h2 className="brand-text text-center">Your Subscription</h2>
                                 :
-                                yourSubscription._id === undefined &&
+                                yourSubscription.length === 0 &&
                                 <div className="text-center">
                                     <h2 className="brand-text text-center">Hello, {loggedInUser.name}</h2>
                                     <h3>You have no subscription yet</h3>
                                     <img className="text-center" src={warningSad} alt="" />
-                                </div>
+                                </div>)
                     }
                 </div>
                 <div>
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
                         :
-                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} />
+                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} isLoding={isLoding}/>
                     }
                 </div>
             </div>

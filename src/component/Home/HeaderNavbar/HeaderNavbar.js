@@ -13,6 +13,7 @@ import { faLongArrowAltUp, faBars, faTimes } from '@fortawesome/free-solid-svg-i
 const HeaderNavbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isSticky, setSticky] = useState(false);
+    const [isNavbarActive, setIsNavbarActive] = useState(false)
     console.log(loggedInUser)
 
     useEffect(() => {
@@ -29,13 +30,14 @@ const HeaderNavbar = () => {
         setLoggedInUser("");
     }
 
+
     return (
         <Jump top>
-            <Navbar id="home" className="navbar" expand="lg">
+            <Navbar id="home" className={`navbar ${isNavbarActive && "navbarActive"}`} expand="lg">
                 <Container>
                     <Navbar.Brand><Link to="/"><img style={{ width: "100px" }} src={logo} alt="" /></Link></Navbar.Brand>
 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav"> <FontAwesomeIcon id="menuBar" icon={faBars} /><FontAwesomeIcon id="crossMark" icon={faTimes} /></Navbar.Toggle>
+                    <Navbar.Toggle onClick={() => setIsNavbarActive(!isNavbarActive)} aria-controls="basic-navbar-nav"> <FontAwesomeIcon id="menuBar" icon={faBars} /><FontAwesomeIcon id="crossMark" icon={faTimes} /></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto text-white">
                             <Nav.Link ><Link to="/">Home</Link></Nav.Link>
