@@ -24,7 +24,7 @@ const HeaderBottom = () => {
                                 <div className="col-md-8 mt-3">
                                     <p><FontAwesomeIcon className="icon" icon={faCheck} /> Delivering top-quality services.</p>
                                     <p><FontAwesomeIcon className="icon" icon={faCheck} /> 24 hours project help support.</p>
-                                    <p><FontAwesomeIcon className="icon" icon={faCheck} /> Easy & trouble free handy deal</p>
+                                    <p><FontAwesomeIcon className="icon" icon={faCheck} /> Easy & trouble free handy deal.</p>
                                 </div>
                             </div>
                         </div>

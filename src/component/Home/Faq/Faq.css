@@ -1,8 +1,3 @@
-.faq-div {
-    height: 600px;
-    overflow: hidden;
-}
-
 .Collapsible {
     box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.37);
 }
@@ -70,6 +65,7 @@
 
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
+
     .faq-div h2 {
         font-size: 50px;
         margin-top: 1em;
@@ -87,5 +83,13 @@
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .faq-div h2 {
         font-size: 50px;
+    }
+}
+
+/* X-Large devices */
+@media (min-width: 991.98px) and (max-width: 2000px) {
+    .faq-div {
+        height: 630px;
+        overflow: hidden;
     }
 }

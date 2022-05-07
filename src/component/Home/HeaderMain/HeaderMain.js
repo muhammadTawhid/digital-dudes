@@ -2,15 +2,15 @@ import './HeaderMain.css';
 import React from 'react';
 import { Link as LinkScroll } from "react-scroll";
 import TextAnimation from "react-animate-text";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faSnapchat, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons'
 
 const HeaderMain = () => {
     return (
         <div className="container">
             <div className="headerMain-container">
-            <div className="row headerMain-container-div">
-                <div className="col-md-8 col-lg-8 ">
+            <div className="row">
+                <div className="col-md-8 col-lg-8">
                     <h1>
                         We Are <TextAnimation><span>Digital Dudes</span></TextAnimation><br />Digital Agency</h1>
                     <p>We are here to grow your business. We have world class designer, developer & seo expert. So we can be the best fit for your project.</p>

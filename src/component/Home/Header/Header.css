@@ -60,7 +60,8 @@
 /* Large devices */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .header-bg {
-        background-size: 1024px 668px;
+        /* width: 100%; */
+        /* background-size: 1024px 668px; */
         height: 600px;
     }
 

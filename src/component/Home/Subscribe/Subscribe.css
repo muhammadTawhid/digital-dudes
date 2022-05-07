@@ -52,7 +52,7 @@
     }
 
     .subscribe-panel h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .subscribe-panel h2 {
@@ -79,7 +79,7 @@
     }
 
     .subscribe-panel h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .subscribe-panel h2 {
@@ -102,7 +102,7 @@
     }
 
     .subscribe-panel h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .subscribe-panel h2 {
@@ -134,7 +134,7 @@
 /* Large devices */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .subscribe-panel h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .subscribe-panel h2 {
@@ -159,7 +159,7 @@
 /* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
     .subscribe-panel h1 {
-        font-size: 55px;
+        font-size: 45px;
     }
 
     .icon {
