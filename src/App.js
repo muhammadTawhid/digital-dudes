@@ -13,6 +13,7 @@ import Login from './component/Home/Login/Login';
 import Subscription from './component/Dashboard/Subscription/Subscription';
 import ActionPageForm from './component/Dashboard/ActionPageForm/ActionPageForm';
 import PrivetRoute from './component/Home/PrivetRoute/PrivetRoute';
+// import Sidebar from './component/Dashboard/Sidebar/Sidebar';
 
 export const UserContext = createContext();
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <BrowserRouter>
+      {/* <Sidebar/> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
