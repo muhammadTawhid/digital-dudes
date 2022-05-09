@@ -45,6 +45,12 @@ export const SidebarData = [
         icon: <FontAwesomeIcon icon={faHouseUser} />,
         cName: "sidebar-text"
     },
+    {
+        title: "Log out",
+        path: "/",
+        icon: <FontAwesomeIcon icon={faSignOutAlt} />,
+        cName: "sidebar-text"
+    },
 ]
 
 // import React from 'react';

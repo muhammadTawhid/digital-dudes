@@ -1,6 +1,7 @@
 import './Sidebar.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../images/logo.png';
 import { SidebarData } from '../SidebarData/SidebarData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faArrowRight, faArrowLeft, faSignOutAlt, faTasks, faFolderPlus, faMoneyCheckAlt, faFileInvoiceDollar, faUserPlus, faHouseUser } from '@fortawesome/free-solid-svg-icons';
@@ -20,13 +21,16 @@ const Sidebar = () => {
       <div className={sidebar ? "sidebar-menu active" : "sidebar-menu"}>
         <ul className="sidebar-menu-items">
           <li className="sidebar-toggle">
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
             <Link to="#" className="menu-bars">
-              <FontAwesomeIcon icon={faArrowLeft} onClick={showSidebar}/>
+              <FontAwesomeIcon icon={faArrowLeft} onClick={showSidebar} />
             </Link>
           </li>
           {
             SidebarData.map((item, index) => {
-              return(
+              return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
