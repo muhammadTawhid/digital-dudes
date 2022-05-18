@@ -39,7 +39,7 @@
 /*  X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .headerMain-container{
-        padding-left: 1em;
+        padding-left: .3em;
         top: 250px;
     }
     .headerMain-container h1 {

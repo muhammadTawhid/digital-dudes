@@ -33,12 +33,12 @@ const ManageService = () => {
     }
 
     return (
-        <div className="row">
+        <div className="row sidebar-row">
             <div className="col-md-2 sidebar-col">
                 <Sidebar />
             </div>
             <div className="col-md-10 manageService-div">
-                <h1 className="brand-text text-center mt-2">Manage your services</h1>
+                <h1 className="brand-text text-center mt-2">Manage services</h1>
                 <div className="row d-flex justify-content-evenly mt-4">
                     <WarningModal show={modalShow} onHide={onHide} serviceDeleteId={serviceDeleteId} setServiceData={setServiceData} />
                     {serviceData.map(data =>

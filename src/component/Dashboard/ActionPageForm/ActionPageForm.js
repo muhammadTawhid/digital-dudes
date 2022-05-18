@@ -117,8 +117,8 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
 
     return (
 
-        <div className="row sidebar-row">
-            {addReview ? "" : <div className="col-md-2">
+        <div className="row sidebar-row ">
+            {addReview ? "" : <div className="col-md-2 sidebar-col">
                 <Sidebar />
             </div>}
             <div className="col-md-10 actionPageForm-div">

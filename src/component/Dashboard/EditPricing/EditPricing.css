@@ -73,7 +73,7 @@
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .editPricing-div {
-        position: fixed;
+        /* position: fixed; */
         margin-top: 3em;
     }
 
@@ -100,7 +100,7 @@
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .editPricing-div {
-        position: fixed;
+        /* position: fixed; */
         margin-top: 3em;
     }
 

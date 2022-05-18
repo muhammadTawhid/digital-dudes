@@ -29,7 +29,7 @@ const Admin = () => {
 
     return (
         <div className="row sidebar-row">
-            <div className="col-md-2">
+            <div className="col-md-2 sidebar-col">
                 <Sidebar />
             </div>
             <div className="col-md-10 mb-5 adminsTable-div">

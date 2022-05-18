@@ -83,9 +83,13 @@
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 767.98px) {
+    .sidebar-col {
+        /* position: absolute; */
+    }
+
     .actionPageForm-div {
         width: 100%;
-        position: fixed;
+        /* position: fixed; */
         margin-top: 3em;
     }
 
@@ -130,7 +134,7 @@
 @media (min-width: 767.98px) and (max-width: 991.98px) {
     .actionPageForm-div {
         width: 100%;
-        position: fixed;
+        /* position: fixed; */
         margin-top: 3em;
     }
 

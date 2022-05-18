@@ -1,12 +1,15 @@
 import './Sidebar.css';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png';
-import { SidebarData } from '../SidebarData/SidebarData';
+import { SidebarAdminData } from '../SidebarAdminData/SidebarAdminData';
+import { SidebarUserData } from '../SidebarUserData/SidebarUserData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faArrowRight, faArrowLeft, faSignOutAlt, faTasks, faFolderPlus, faMoneyCheckAlt, faFileInvoiceDollar, faUserPlus, faHouseUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faArrowLeft, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { UserContext } from '../../../App';
 
 const Sidebar = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [sidebar, setSidebar] = useState(true);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -24,22 +27,46 @@ const Sidebar = () => {
             <Link to="/">
               <img src={logo} alt="" />
             </Link>
+            <div>
+              <img id="sidebar-avatar"
+                src={loggedInUser.imgUrl}
+                alt=""
+              />
+            </div>
             <Link to="#" className="menu-bars">
               <FontAwesomeIcon icon={faArrowLeft} onClick={showSidebar} />
             </Link>
           </li>
           {
-            SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span className="sidebar-title">{item.title}</span>
-                  </Link>
-                </li>
-              )
-            })
+            loggedInUser.admin ?
+              SidebarAdminData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <Link to={item.path}>
+                      {item.icon}
+                      <span className="sidebar-title">{item.title}</span>
+                    </Link>
+                  </li>
+                )
+              })
+              :
+              SidebarUserData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <Link to={item.path}>
+                      {item.icon}
+                      <span className="sidebar-title">{item.title}</span>
+                    </Link>
+                  </li>
+                )
+              })
           }
+          <li className="sidebar-text">
+            <button onClick={() => setLoggedInUser("")}>
+              <FontAwesomeIcon icon={faSignOutAlt} />
+              <span className="sidebar-title">Log Out</span>
+            </button>
+          </li>
         </ul>
       </div>
     </>
