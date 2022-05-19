@@ -71,7 +71,7 @@ const AddAdmin = ({ setAdmins }) => {
                     {errors.adminEmail && <small className="text-danger addAdminInput-err">{errors.adminEmail?.message}</small>}
                 </div>
                 <div className="col-md-2 addAdminInput-btn-div">
-                    <button type="submit" className={`btn btn-success ${pending && "disabled"}`} >{
+                    <button type="submit" className={`btn btn-success mb-4 ${pending && "disabled"}`} >{
                         pending ? <span><Spinner
                             animation="border"
                             size="sm"

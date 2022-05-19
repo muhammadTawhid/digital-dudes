@@ -33,8 +33,8 @@ const Sidebar = () => {
                 alt=""
               />
             </div>
-            <Link to="#" className="menu-bars">
-              <FontAwesomeIcon icon={faArrowLeft} onClick={showSidebar} />
+            <Link to="#" className={sidebar ? "menu-bars" : "menu-bars left-arrow-icon"}>
+              <FontAwesomeIcon icon={faArrowLeft} onClick={showSidebar}/>
             </Link>
           </li>
           {

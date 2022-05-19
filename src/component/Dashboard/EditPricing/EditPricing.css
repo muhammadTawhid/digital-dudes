@@ -73,12 +73,13 @@
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .editPricing-div {
-        /* position: fixed; */
-        margin-top: 3em;
+        /* margin-top: 3em; */
+        position: absolute;
+        z-index: -1;
     }
 
     .editPricing-div h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .pricing-type-btn {
@@ -100,12 +101,13 @@
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .editPricing-div {
-        /* position: fixed; */
-        margin-top: 3em;
+        /* margin-top: 3em; */
+        position: absolute;
+        z-index: -1;
     }
 
     .editPricing-div h1 {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .pricing-type-btn {
@@ -128,8 +130,13 @@
 @media (min-width: 767.98px) and (max-width: 991.98px) {
     .editPricing-div {
         width: 100%;
-        position: fixed;
-        margin-top: 3em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 3em; */
+    }
+
+    .editPricing-div h1 {
+        font-size: 50px;
     }
 
     .pricing-type-btn {
@@ -146,7 +153,8 @@
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .editPricing-div {
         width: 100%;
-        position: fixed;
+        position: absolute;
+        z-index: -1;
     }
 
     .editPricing-div h1 {

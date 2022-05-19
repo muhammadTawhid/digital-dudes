@@ -1,12 +1,9 @@
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
-    .sidebar-col {
-        position: absolute;
-    }
-    
     .adminsTable-div {
-        position: fixed;
-        margin-top: 4em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 4em; */
     }
 
     .adminsTable-div h2 {
@@ -27,8 +24,9 @@
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .adminsTable-div {
-        position: fixed;
-        margin-top: 4em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 4em; */
     }
 
     .adminsTable-div h2 {
@@ -50,8 +48,9 @@
 @media (min-width: 767.98px) and (max-width: 991.98px) {
     .adminsTable-div {
         width: 100%;
-        position: fixed;
-        margin-top: 3em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 3em; */
     }
 
     .adminsTable-div h2 {
@@ -62,9 +61,9 @@
 /* Large devices */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .adminsTable-div {
-        position: fixed;
+        position: absolute;
+        z-index: -1;
         width: 100%;
-        margin-top: 3em;
     }
 }
 
