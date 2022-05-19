@@ -28,6 +28,7 @@ initializeApp(firebaseConfig);
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [showPass, setShowPass] = useState(false);
+    const [showConfirmPass, setShowConfirmPass] = useState(false);
     const [newUser, setNewUser] = useState(false);
     const {
         register,
@@ -284,10 +285,10 @@ const Login = () => {
                             })}
                             onKeyUp={() => trigger("confirmPassword")}
                             required
-                            type={showPass ? "text" : "password"}
+                            type={showConfirmPass ? "text" : "password"}
                             placeholder="Confirm Password"
                         />
-                        <button onClick={() => setShowPass(!showPass)} className="eye-btn d-flex text-end">{showPass ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}</button>
+                        <button onClick={() => setShowConfirmPass(!showConfirmPass)} className="eye-btn d-flex text-end">{showConfirmPass ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}</button>
                     </div>
                     {errors.confirmPassword && (
                         <small className="err-message">

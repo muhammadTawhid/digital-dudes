@@ -7,7 +7,7 @@ import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const YourSubscription = ({ yourSubscription, setYourSubscription, isLoding }) => {
+const YourSubscription = ({ yourSubscription, setYourSubscription, isLoading }) => {
     const todaysDate = new Date(new Date().toISOString().substring(0, 10));
     const daysLeft = Math.ceil(Math.abs(new Date(yourSubscription.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24));
     const remainingDays = 30 - daysLeft;
@@ -25,7 +25,7 @@ const YourSubscription = ({ yourSubscription, setYourSubscription, isLoding }) =
 
     return (
         <div>
-            {isLoding ? 
+            {isLoading ? 
                 <div className="yourSubscription-div">
                     <Skeleton className="subscriptionDetail-skeleton-h2" width={300} height={40} />
                     <p><Skeleton className="subscriptionDetail-skeleton-p" width={600} height={20} /></p>

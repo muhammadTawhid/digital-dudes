@@ -11,7 +11,7 @@ const Subscription = () => {
     const [loggedInUser] = useContext(UserContext);
     const [yourSubscription, setYourSubscription] = useState([]);
     const [subscriptedUser, setSubscriptedUser] = useState([]);
-    const [isLoding, setIsLoding] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     console.log(yourSubscription)
     useEffect(() => {
@@ -27,7 +27,7 @@ const Subscription = () => {
         })
             .then(res => {
                 setYourSubscription(res.data)
-                setIsLoding(false)
+                setIsLoading(false)
             })
     }, [])
 
@@ -42,16 +42,16 @@ const Subscription = () => {
                 <div>
 
                     {
-                        !isLoding &&
+                        !isLoading &&
                         (loggedInUser.admin ?
-                            <h2 className="brand-text text-center">You have {subscriptedUser.length} subscripted users </h2>
+                            <h2 className="brand-text text-center">Subscripted Users </h2>
                             :
                             yourSubscription._id ? <h2 className="brand-text text-center">Your Subscription</h2>
                                 :
                                 yourSubscription.length === 0 &&
                                 <div className="text-center">
                                     <h2 className="brand-text text-center">Hello, {loggedInUser.name}</h2>
-                                    <h3>You have no subscription yet</h3>
+                                    <h3>You have no subscription !</h3>
                                     <img className="text-center" src={warningSad} alt="" />
                                 </div>)
                     }
@@ -59,7 +59,7 @@ const Subscription = () => {
                 <div>
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
                         :
-                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} isLoding={isLoding}/>
+                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} isLoading={isLoading}/>
                     }
                 </div>
             </div>

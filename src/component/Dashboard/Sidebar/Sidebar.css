@@ -149,7 +149,7 @@
 @media(min-width: 1199.98px) and (max-width: 2000px) {
     .sidebar-menu {
         width: 230px;
-        height: 100vh;
+        height: 100%;
     }
 
     .menu-bars {

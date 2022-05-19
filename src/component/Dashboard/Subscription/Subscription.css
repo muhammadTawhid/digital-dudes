@@ -6,17 +6,16 @@
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .subscription-div {
         width: 100%;
-        position: fixed;
-        margin-top: 3em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 3em; */
     }
     .subscription-div img {
         width: 70%;
     }
 
     .subscription-div h2 {
-        font-size: 30px;
-        width: 75%;
-        margin: 0 auto;
+        font-size: 35px;
     }
 }
 
@@ -24,16 +23,15 @@
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .subscription-div {
         width: 100%;
-        position: fixed;
-        margin-top: 3em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 3em; */
     }
     .subscription-div img {
         width: 70%;
     }
     .subscription-div h2 {
         font-size: 40px;
-        width: 80%;
-        margin: 0 auto;
     }
 }
 
@@ -41,8 +39,9 @@
 @media (min-width: 767.98px) and (max-width: 991.98px) {
     .subscription-div {
         width: 100%;
-        position: fixed;
-        margin-top: 3em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 3em; */
     }
     .subscription-div h2 {
         font-size: 45px;
@@ -53,8 +52,9 @@
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .subscription-div {
         width: 100%;
-        position: fixed;
-        margin-top: 3em;
+        position: absolute;
+        z-index: -1;
+        /* margin-top: 3em; */
     }
 
     .subscription-div h2 {
