@@ -78,15 +78,15 @@
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
-    .sidebar-col {
-        /* position: absolute; */
-    }
     .manageService-div {
+        position: absolute;
+        z-index: -1;
+        margin-top: 5px;
         padding: 0 .5em;
     }
 
     .manageService-div h1 {
-        font-size: 33px;
+        font-size: 30px;
     }
 
     .manageService-card h4 {

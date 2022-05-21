@@ -49,7 +49,7 @@ const Subscription = () => {
                             yourSubscription._id ? <h2 className="brand-text text-center">Your Subscription</h2>
                                 :
                                 yourSubscription.length === 0 &&
-                                <div className="text-center">
+                                <div className="text-center" id="noSubscription-div">
                                     <h2 className="brand-text text-center">Hello, {loggedInUser.name}</h2>
                                     <h3>You have no subscription !</h3>
                                     <img className="text-center" src={warningSad} alt="" />

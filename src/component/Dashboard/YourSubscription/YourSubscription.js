@@ -26,7 +26,7 @@ const YourSubscription = ({ yourSubscription, setYourSubscription, isLoading }) 
     return (
         <div>
             {isLoading ? 
-                <div className="yourSubscription-div">
+                <div className="yourSubscription-div"  id="yourSubscription-skeleton-div">
                     <Skeleton className="subscriptionDetail-skeleton-h2" width={300} height={40} />
                     <p><Skeleton className="subscriptionDetail-skeleton-p" width={600} height={20} /></p>
                     <div className="subscriptionDetail-div subscriptionDetail-skeleton-div">

@@ -46,9 +46,9 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
         setImgUploading(true)
         axios.post('https://api.imgbb.com/1/upload', newImgData)
             .then(function (response) {
-                console.log(response.data.data.display_url, "succ");
+                console.log(response.data.data.display_url, "success");
                 setImgUrl(response.data.data.display_url);
-                setImgUploading(false)
+                setImgUploading(false) 
             })
             .catch(function (error) {
                 console.log(error, "img up err");

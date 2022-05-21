@@ -58,6 +58,10 @@
         width: 90%;
     }
 
+    #yourSubscription-skeleton-div{
+        margin-top: 5em;
+    }
+
     .yourSubscription-div h2 {
         font-size: 25px;
         margin: 0 0;

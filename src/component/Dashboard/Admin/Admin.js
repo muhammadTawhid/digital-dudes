@@ -33,7 +33,7 @@ const Admin = () => {
                 <Sidebar />
             </div>
             <div className="col-md-10 mb-5 adminsTable-div">
-                <h2 className="text-center brand-text">List of Admins</h2>
+                <h2 className="text-center brand-text">Admins List</h2>
                 <div className="scrollable-admins-table">
                     <Table hover className="container text-center admins-table">
                         <thead>

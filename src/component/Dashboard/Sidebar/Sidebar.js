@@ -5,7 +5,7 @@ import logo from '../../../images/logo.png';
 import { SidebarAdminData } from '../SidebarAdminData/SidebarAdminData';
 import { SidebarUserData } from '../SidebarUserData/SidebarUserData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faTimes, faBars, faArrowLeft, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 
 const Sidebar = () => {
@@ -17,11 +17,21 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar">
-        <Link to="#" className="menu-bars">
+        <div className={sidebar ? "menu clicked" : "menu"} onClick={showSidebar}>
+          <FontAwesomeIcon icon={faBars} onClick={showSidebar} />
+        </div>
+        <div>
+          <img
+            id="sidebar-header-avatar"
+            src={loggedInUser.imgUrl}
+            alt=""
+          />
+        </div>
+        {/* <Link to="#" className="menu-bars">
           <FontAwesomeIcon icon={faArrowRight} onClick={showSidebar} />
-        </Link>
+        </Link> */}
       </div>
-      <div className={sidebar ? "sidebar-menu active" : "sidebar-menu"}>
+      <div className={sidebar ? "sidebar-menu sidebar-active" : "sidebar-menu"}>
         <ul className="sidebar-menu-items">
           <li className="sidebar-toggle">
             <Link to="/">
@@ -33,8 +43,11 @@ const Sidebar = () => {
                 alt=""
               />
             </div>
+            <div>
+              <FontAwesomeIcon icon={faTimes} onClick={showSidebar} id="xMark-icon" />
+            </div>
             <Link to="#" className={sidebar ? "menu-bars" : "menu-bars left-arrow-icon"}>
-              <FontAwesomeIcon icon={faArrowLeft} onClick={showSidebar}/>
+              <FontAwesomeIcon id="left-arrow" icon={faArrowLeft} onClick={showSidebar} />
             </Link>
           </li>
           {
