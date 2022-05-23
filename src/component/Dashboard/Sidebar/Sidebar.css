@@ -19,7 +19,7 @@
     /* position: absolute; */
     /* width: 20px; */
     /* border: 1px solid red; */
-    box-shadow: 2px 2px 2px lightgray;
+    /* box-shadow: 2px 2px 2px lightgray; */
     border-radius: 5px;
     /* height: 80px; */
     display: flex;
@@ -42,16 +42,19 @@
     left: 4%;
     top: 13%;
     /* z-index: 29; */
+    transition: .7s;
 }
 
-.menu.clicked:hover{
+.menu.clicked{
     transform: rotate(90deg);
+    transition: .1s;
 }
 
 #sidebar-header-avatar {
     /* justify-content: end !important; */
     /* align-items:flex-end; */
     /* margin-right: auto !important; */
+    display: none;
     width: 35px;
     clip-path: circle();
     border: 3px solid transparent;
@@ -121,8 +124,8 @@
     /* background-color: #060b26; */
     background-color: #2d2d2d;
     width: 250px;
-    /* height: 600px; */
-    height: 100vh;
+    height: 600px;
+    /* height: 100vh; */
 
     display: flex;
     justify-content: center;
@@ -151,7 +154,8 @@
 
 .sidebar-text {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
+    /* justify-content: start; */
     align-items: center;
     padding: 8px 0px 8px 0px;
     height: 60px;
@@ -207,7 +211,8 @@
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
+    /* justify-content: start; */
     align-items: center;
 }
 
@@ -215,13 +220,26 @@
     margin-left: 16px;
 }
 
-/* X-Small devices */
+
+
+ /* X-Small devices (portrait phones, less than 576px) */
+
 @media (min-width: 300.98px) and (max-width: 575.98px) {
+    .sidebar{
+        box-shadow: 2px 2px 2px lightgray;
+    }
+    .sidebar-menu{
+        height: 100vh;
+    }
     .menu-bars {
         display: none;
     }
 
     #xMark-icon {
+        display: block;
+    }
+
+    #sidebar-header-avatar{
         display: block;
     }
 
@@ -233,6 +251,53 @@
         width: 100%;
         position: fixed;
     }
+
+}  
+
+    /* Small devices (landscape phones, less than 768px) */
+
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .sidebar{
+        box-shadow: 2px 2px 2px lightgray;
+    }
+
+    #sidebar-header-avatar{
+        display: block;
+    }
+}
+
+    /* Medium devices (tablets, less than 992px) */
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .menu {
+        font-size: 2.5em;
+        margin-left: 1em;
+    }
+
+    #sidebar-avatar{
+        display: block;
+    }
+}
+
+    /* Large devices (desktops, less than 1200px) */
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+    .menu {
+        font-size: 3em;
+        margin-left: 1em;
+    }
+
+    #sidebar-avatar{
+        display: block;
+    }
+}
+
+    /* X-Large devices (large desktops, less than 1400px) */
+
+@media (min-width: 991.98px) and (max-width: 1399.98px), (min-width: 1399.98px) and (max-width: 2000px) {
+
+   
+
 }
 
 /* X-Large devices */
@@ -245,8 +310,8 @@
     #sidebar-avatar{
         display: block;
     }
-    .menu-bars , #xMark-icon {
-        /* display: none; */
+    .menu-bars {
+        display: none;
     }
 }
 

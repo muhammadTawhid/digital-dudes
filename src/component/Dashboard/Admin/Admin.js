@@ -35,27 +35,27 @@ const Admin = () => {
             <div className="col-md-10 mb-5 adminsTable-div">
                 <h2 className="text-center brand-text">Admins List</h2>
                 <div className="scrollable-admins-table">
-                    <Table hover className="container text-center admins-table">
-                        <thead>
+                    <Table hover className="container admins-table">
+                        <thead className="table-header">
                             <tr>
-                                <th>#</th>
-                                <th>Admins</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Type</th>
-                                <th>Action</th>
+                                <th><span>#</span></th>
+                                <th><span>Admins</span></th>
+                                <th><span>Name</span></th>
+                                <th><span>Email</span></th>
+                                <th><span>Type</span></th>
+                                <th><span>Action</span></th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                                 admins.map((data, index) =>
                                     <tr key={data._id}>
-                                        <td>{index + 1}</td>
-                                        <td><img style={{ width: "35px", clipPath: "circle()" }} src={data.adminImg} alt="" /></td>
-                                        <td>{data.adminName}</td>
-                                        <td>{data.adminEmail}</td>
-                                        <td>{data.adminType}</td>
-                                        <td><button onClick={() => handleRemoveAdmin(data._id)} className={`btn btn-danger ${data.adminType === "Main" && "disabled"}`}>Remove</button></td>
+                                        <td><span>{index + 1}</span></td>
+                                        <td><span><img style={{ width: "35px", clipPath: "circle()" }} src={data.adminImg} alt="" /></span></td>
+                                        <td><span>{data.adminName}</span></td>
+                                        <td><span>{data.adminEmail}</span></td>
+                                        <td><span>{data.adminType}</span></td>
+                                        <td><span><button onClick={() => handleRemoveAdmin(data._id)} className={`btn btn-danger ${data.adminType === "Main" && "disabled"}`}>Remove</button></span></td>
                                     </tr>
                                 )
                             }

@@ -13,7 +13,7 @@ const Footer = () => {
                 <section className="footer-main-section">
                     <div className="container text-center text-md-start mt-5">
                         <div className="row mt-3">
-                            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 footer-top-div">
                                 <h4>
                                     Our Company
                                 </h4>
@@ -29,14 +29,15 @@ const Footer = () => {
                                 <p>
                                     <LinkScroll to="home" spy={true} smooth={true} duration={800} className="text-reset">Home</LinkScroll>
                                 </p>
+                                
                                 <p>
-                                    <LinkScroll to="aboutUs" spy={true} smooth={true} duration={800} className="text-reset">About Us</LinkScroll>
+                                    <LinkScroll to="pricing" spy={true} smooth={true} duration={800} className="text-reset">Pricing</LinkScroll>
                                 </p>
                                 <p>
                                     <LinkScroll to="services" offset={20} spy={true} smooth={true} duration={800} className="text-reset">Services</LinkScroll>
                                 </p>
                                 <p>
-                                    <LinkScroll to="pricing" spy={true} smooth={true} duration={800} className="text-reset">Pricing</LinkScroll>
+                                    <LinkScroll to="aboutUs" spy={true} smooth={true} duration={800} className="text-reset">About Us</LinkScroll>
                                 </p>
                             </div>
 
@@ -51,10 +52,10 @@ const Footer = () => {
                                     <LinkScroll to="aboutUs" spy={true} smooth={true} duration={800} className="text-reset">Support</LinkScroll>
                                 </p>
                                 <p>
-                                    <a href="/" className="text-reset">Privacy</a>
+                                    <a href="/" className="text-reset">Privacy Policy</a>
                                 </p>
                                 <p>
-                                    <a href="/" className="text-reset">Terms & Conditions</a>
+                                    <a href="/" className="text-reset">Terms and Conditions</a>
                                 </p>
                             </div>
 

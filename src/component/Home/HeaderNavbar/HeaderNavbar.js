@@ -53,7 +53,7 @@ const HeaderNavbar = () => {
                                         />
                                     </div>
                                 } id="basic-nav-dropdown">
-                                        <p className="text-center"><b>{loggedInUser.name}</b></p>
+                                    <p className="text-center"><b>{loggedInUser.name}</b></p>
                                     <NavDropdown.Item>
                                         <button onClick={handleLogOut} className="log-out">Log out</button>
                                     </NavDropdown.Item>
@@ -64,8 +64,13 @@ const HeaderNavbar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <button className={isSticky ? "scroll-top-btn" : "scroll-top-btn-hide"}><LinkScroll to="home" spy={true} smooth={true} duration={1000} className="text-reset"><FontAwesomeIcon icon={faLongArrowAltUp} />
-            </LinkScroll></button>
+            <div className={isSticky ? "scroll-top-btn-div" : "scroll-top-btn-div-hide"}>
+                <LinkScroll to="home" spy={true} smooth={true} duration={1000} >
+                    <button className="scroll-top-btn">
+                        <FontAwesomeIcon icon={faLongArrowAltUp} />
+                    </button>
+                </LinkScroll>
+            </div>
         </Jump>
     );
 };

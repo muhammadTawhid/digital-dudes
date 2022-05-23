@@ -138,7 +138,7 @@
         position: absolute;
         z-index: -1;
         width: 100%;
-        padding: 1em;
+        padding: 0 1em;
     }
 
     .manageService-card {

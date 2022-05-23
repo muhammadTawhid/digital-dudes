@@ -9,32 +9,32 @@ const SubscriptedUser = ({ subscriptedUser }) => {
 
     return (
         <div className="scrollable-subscriptedUser-table">
-            <table className="text-center table table-hover containe">
+            <table className="text-cente table table-hover containe">
                 <thead>
                     <tr>
-                        <th className="table-heading">#</th>
-                        <th className="table-heading">Name</th>
-                        <th className="table-heading">Email</th>
-                        <th className="table-heading"><span id="subscription-text">Subscription</span> Type</th>
-                        <th className="table-heading">Expiration</th>
+                        <th className="table-heading"><span>#</span></th>
+                        <th className="table-heading"><span>Name</span></th>
+                        <th className="table-heading"><span>Email</span></th>
+                        <th className="table-heading"><span><span id="subscription-text">Subscription</span> Type</span></th>
+                        <th className="table-heading"><span>Expiration <span id="period-text">Period</span></span></th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         subscriptedUser.map((user, index) =>
                             <tr key={user._id}>
-                                <td>{index + 1}</td>
-                                <td>{user.name}</td>
-                                <td>{user.email}</td>
-                                <td>{user.paymentFor}</td>
+                                <td><span>{index + 1}</span></td>
+                                <td><span>{user.name}</span></td>
+                                <td><span>{user.email}</span></td>
+                                <td><span>{user.paymentFor}</span></td>
                                 <td>
-                                    {
-                                        (Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) <= 30)
-                                            ?
-                                            (30 - Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) + " days remaining")
-                                            :
-                                            <span className="text-danger">Subscription disabled</span>
-                                    }
+                                        {
+                                            (Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) <= 30)
+                                                ?
+                                                (30 - Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) + " days remaining")
+                                                :
+                                                <span className="text-danger">Subscription <span id="disabled-text">disabled</span></span>
+                                        }
                                 </td>
                             </tr>
                         )

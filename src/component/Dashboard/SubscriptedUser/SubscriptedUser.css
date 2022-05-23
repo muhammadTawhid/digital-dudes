@@ -1,3 +1,15 @@
+.scrollable-subscriptedUser-table td, .scrollable-subscriptedUser-table tr {
+    vertical-align: middle;
+}
+
+.scrollable-subscriptedUser-table span {
+    margin-left: 3em;
+}
+
+#disabled-text {
+    margin-left: 0;
+}
+
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .scrollable-subscriptedUser-table {
         width: 95%;
@@ -9,7 +21,23 @@
         font-size: 15px;
     }
 
-    #subscription-text {
+    #subscription-text, #period-text {
+        display: none;
+    }
+
+    #disabled-text {
+        margin-left: 3em;
+    }
+}
+
+@media (min-width: 575.98px) and (max-width: 812px) {
+    #disabled-text {
+        margin-left: 3em;
+    }
+}
+
+@media (min-width: 575.98px) and (max-width: 940px) {
+    #subscription-text, #period-text {
         display: none;
     }
 }
@@ -18,5 +46,9 @@
     .scrollable-subscriptedUser-table {
         width: 95%;
         margin: 0 auto;
+    }
+
+    #subscription-text, #period-text {
+        margin-left: 0;
     }
 }

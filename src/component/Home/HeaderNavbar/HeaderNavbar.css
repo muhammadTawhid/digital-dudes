@@ -65,20 +65,22 @@
     border: none;
     background-color: transparent;
     font-weight: 600;
+} 
+
+.scroll-top-btn-div{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
 }
 
-.scroll-top-btn {
-    z-index: 1000;
+.scroll-top-btn{
     padding: 5px 10px;
     background: white;
     border: none;
     border: 1px solid red;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    transform: translateZ(50px);
     transition: 0.2s;
 }
 
@@ -92,7 +94,7 @@
     font-size: 30px;
 }
 
-.scroll-top-btn-hide {
+.scroll-top-btn-div-hide {
     display: none;
 }
 

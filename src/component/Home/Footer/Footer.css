@@ -72,12 +72,11 @@
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .footer-main-section {
         height: 100%;
-        text-align: center !important;
-        align-items: center;
+        padding: .5em 1em;
     }
 
-    .footer-part-div p {
-        text-align: center;
+    .footer-part-div, .footer-top-div{
+        text-align: left;
     }
 
     .footer-bottom-section {
@@ -94,12 +93,10 @@
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .footer-main-section {
         height: 100%;
-        text-align: center !important;
-        align-items: center;
     }
 
-    .footer-part-div p {
-        text-align: center;
+    .footer-part-div, .footer-top-div{
+        text-align: left;
     }
 
     .footer-bottom-section {
