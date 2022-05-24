@@ -44,7 +44,7 @@ const Subscription = () => {
                     {
                         !isLoading &&
                         (loggedInUser.admin ?
-                            <h2 className="brand-text text-center">Subscripted Users </h2>
+                            <h2 style={{position:"static"}} className="brand-text text-center">Subscripted Users </h2>
                             :
                             yourSubscription._id ? <h2 className="brand-text text-center">Your Subscription</h2>
                                 :

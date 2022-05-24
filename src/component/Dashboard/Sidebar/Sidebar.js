@@ -46,8 +46,8 @@ const Sidebar = () => {
             <div>
               <FontAwesomeIcon icon={faTimes} onClick={showSidebar} id="xMark-icon" />
             </div>
-            <Link to="#" className={sidebar ? "menu-bars" : "menu-bars left-arrow-icon"}>
-              <FontAwesomeIcon id="left-arrow" icon={faArrowLeft} onClick={showSidebar} />
+            <Link to="#" className={sidebar ? "menu-bars" : "menu-bars left-arrow-icon"} onClick={showSidebar}>
+              <FontAwesomeIcon id="left-arrow" icon={faArrowLeft} />
             </Link>
           </li>
           {

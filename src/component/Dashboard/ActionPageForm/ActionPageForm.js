@@ -121,7 +121,7 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
             {addReview ? "" : <div className="col-md-2 sidebar-col">
                 <Sidebar />
             </div>}
-            <div className="col-md-10 actionPageForm-div pb-4">
+            <div className={addReview ? "col-md-10 actionPageForm-div addReview-active pb-4" : "col-md-10 actionPageForm-div pb-4"}>
                 <h2 className="brand-text text-center">{addReview ? "Add Review" : serviceUpdateId ? "Edit Service" : "Add Service"}</h2>
                 <SuccessNotify setSuccessNotify={setSuccessNotify} successNotify={successNotify} />
                 <div className="form-container d-flex">

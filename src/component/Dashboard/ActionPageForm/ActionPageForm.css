@@ -1,21 +1,19 @@
 .form-container {
+    position: relative;
     background: #efefef93;
     border-radius: 10px;
-    width: 1000px;
-    /* border: 1px solid red; */
+    width: 90%;
     margin: 3em auto;
+    z-index: -1;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .form-container img {
     width: 250px;
     height: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .form-container form {
-    width: 750px;
     color: rgba(0, 0, 0, 0.904);
     padding: 20px;
     margin: auto 20px;
@@ -31,12 +29,12 @@
 }
 
 .form-container input {
+    width: 90%;
     margin-top: 5px;
     padding: 10px 10px;
     border-radius: 5px;
     border: none;
     outline: none;
-    width: 330px;
 }
 
 .form-container textarea {
@@ -67,7 +65,6 @@
     font-weight: 700;
     border-radius: 5px;
     transition: 0.3s;
-
 }
 
 #add-service-btn:hover {
@@ -88,12 +85,12 @@
         width: 100%;
         position: absolute;
         z-index: -1;
-        margin-top: .5em;
+        margin-top: .6em;
     }
 
     .actionPageForm-div h2 {
-        font-size: 40px;
-        margin-bottom: 1em;
+        font-size: 35px;
+        margin-bottom: 1.5em;
     }
 
     .form-container form {
@@ -101,7 +98,7 @@
         margin: auto 0;
     }
 
-    .form-container input, #upload-thumbnail-btn {
+    .form-container input, .form-container textarea, #upload-thumbnail-btn {
         width: 100%;
     }
 
@@ -123,10 +120,6 @@
     .form-container img {
         display: none;
     }
-
-    .form-container textarea {
-        width: 100%;
-    }
 }
 
 /* Medium devices */
@@ -135,24 +128,18 @@
         width: 100%;
         position: absolute;
         z-index: -1;
-        margin-top: 1em;
+        margin-top: .7em;
     }
 
     .actionPageForm-div h2 {
         font-size: 45px;
+        margin-bottom: .7em;
     }
 
     .form-container {
+        height: 350px;
         width: 90%;
         margin: 0 auto;
-    }
-
-    .form-container form {
-        width: 100%;
-    }
-
-    .form-container input {
-        width: 90%;
     }
 
     .form-container h6 {
@@ -175,20 +162,17 @@
         width: 100%;
         position: absolute;
         z-index: -1;
-        margin-top: 1em;
+        margin-top: .2em;
     }
 
     .actionPageForm-div h2 {
-        font-size: 50px;
+        margin-bottom: .7em;
     }
 
     .form-container {
         width: 90%;
+        height: 350px;
         margin: 0 auto;
-    }
-
-    .form-container input {
-        width: 90%;
     }
 
     .form-container h6 {
@@ -207,7 +191,15 @@
 
 /* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
+    .form-container {
+        position: static;
+    }
+
     .form-container form {
+        position: static;
+    }
+
+    .addReview-active {
         width: 100%;
     }
 }
