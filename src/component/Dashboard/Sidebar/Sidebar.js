@@ -1,5 +1,5 @@
 import './Sidebar.css';
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import { SidebarAdminData } from '../SidebarAdminData/SidebarAdminData';
@@ -11,24 +11,18 @@ import useWindowDimensions from '../../Hooks/useWindowDimensions';
 
 const Sidebar = () => {
   const { width } = useWindowDimensions();
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const [sidebar, setSidebar] = useState(true);
+  const [loggedInUser, setLoggedInUser, sidebar, setSidebar] = useContext(UserContext);
 
-    useEffect(() => {
+  useEffect(() => {
     document.title = "Dashboard"
   }, []);
 
 
   const showSidebar = () => {
-    console.log("!sidebar")
     setSidebar(!sidebar)
   };
 
-  console.log(sidebar, "beforo ");
-  console.log(width);
-
   const sidebarDisable = () => {
-    console.log("into the fun")
     if (width <= 575) {
       setSidebar(false);
     }
@@ -38,7 +32,7 @@ const Sidebar = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="sidebar">
         <div className={sidebar ? "menu clicked" : "menu"} onClick={showSidebar}>
           <FontAwesomeIcon icon={faBars} />
@@ -75,7 +69,7 @@ const Sidebar = () => {
               SidebarAdminData.map((item, index) => {
                 return (
                     <li key={index} className={item.cName} onClick={sidebarDisable}>
-                      <Link to={item.path} >
+                      <Link to={item.path}>
                         {item.icon}
                         <span className="sidebar-title">{item.title}</span>
                       </Link>
@@ -102,7 +96,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

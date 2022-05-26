@@ -13,19 +13,19 @@ import Login from './component/Home/Login/Login';
 import Subscription from './component/Dashboard/Subscription/Subscription';
 import ActionPageForm from './component/Dashboard/ActionPageForm/ActionPageForm';
 import PrivetRoute from './component/Home/PrivetRoute/PrivetRoute';
-// import Sidebar from './component/Dashboard/Sidebar/Sidebar';
+import Sidebar from './component/Dashboard/Sidebar/Sidebar';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({ name: "tanjim", email: "sonda1@gmail.com", imgUrl: "https://i.ibb.co/WKjYBgg/user-Avatar.png", admin: true })
+  const [sidebar, setSidebar] = useState(true);
   // const [loggedInUser, setLoggedInUser] = useState({ name: "", email: "", imgUrl: "", admin: null })
   console.log(loggedInUser)
 
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser, sidebar, setSidebar]}>
       <BrowserRouter>
-      {/* <Sidebar/> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -37,6 +37,7 @@ function App() {
           <Route path="/dashboard/addAdmin" element={<PrivetRoute><Admin /></PrivetRoute>} />
           <Route path="/dashboard/subscription" element={<PrivetRoute><Subscription /></PrivetRoute>} />
           <Route path="/dashboard/addReview" element={<PrivetRoute><AddReview /></PrivetRoute>} />
+          <Route path="/dashboard/addReview" element={<PrivetRoute><Sidebar /></PrivetRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

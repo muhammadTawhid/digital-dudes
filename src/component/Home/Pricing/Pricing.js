@@ -18,7 +18,7 @@ const Pricing = () => {
     return (
         <Fade bottom>
             <section id="pricing">
-                <h2 className="brand-text text-center pricing-title">Flexible Pricing Plane</h2>
+                <h2 className="brand-text text-center pricing-title">Flexible Pricing Plan</h2>
                 <div className="container">
                     <div className="row d-flex justify-content-evenly">
                         {

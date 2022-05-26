@@ -4,6 +4,7 @@
     padding: 20px;
     text-align: center;
     transition: 0.3s;
+    position: relative;
 }
 
 .team-card:hover {
@@ -87,6 +88,10 @@
 
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
+    .team-card{
+        flex: 0 0 auto;
+        width: 50%;
+    }
     .team-heading {
         font-size: 50px;
         margin-bottom: 10px;
@@ -117,7 +122,7 @@
 /* Large devices */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
     .team-card {
-        width: 240px;
+        width: 340px;
     }
 
     .team-card img {
@@ -126,6 +131,6 @@
     }
 
     .team-card div {
-        transform: translateY(-320px);
+        transform: translateY(-320px) translateX(50px);
     }
 }

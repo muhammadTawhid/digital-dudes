@@ -1,3 +1,8 @@
+.faq-div {  
+    padding: 0 .5em;
+    margin: .5em;
+}
+
 .Collapsible {
     box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.37);
 }
@@ -91,5 +96,6 @@
     .faq-div {
         height: 630px;
         overflow: hidden;
+        margin: 0 .5em;
     }
 }

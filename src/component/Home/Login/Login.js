@@ -127,7 +127,7 @@ const Login = () => {
     };
 
     // handle google sign in
-    const handleGoogleSignIn = () => {
+    const handleGoogleSignIn = (e) => {
         const provider = new GoogleAuthProvider();
         const auth = getAuth();
         signInWithPopup(auth, provider)
@@ -170,7 +170,7 @@ const Login = () => {
     }
 
     // user info updating on state
-    const setUserInfo = (user) => {
+    const setUserInfo = (user, e) => {
         if (user) {
             axios.get("https://digital-dudes.herokuapp.com/admins/" + user.email)
                 .then(res => {
@@ -182,6 +182,7 @@ const Login = () => {
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
                         history("/dashboard/subscription");
+                        e.preventDefault();
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -191,6 +192,7 @@ const Login = () => {
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
                         history("/dashboard/subscription");
+                        e.preventDefault();
                     }
                 })
         }

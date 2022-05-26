@@ -6,6 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import SubscriptedUser from '../SubscriptedUser/SubscriptedUser';
 import YourSubscription from '../YourSubscription/YourSubscription';
 import { UserContext } from '../../../App';
+import { Link } from 'react-router-dom';
 
 const Subscription = () => {
     const [loggedInUser] = useContext(UserContext);
@@ -38,13 +39,12 @@ const Subscription = () => {
                 <Sidebar />
             </div>
             <div className="col-lg-10 container subscription-div">
-                {/* <h2 className="brand-text text-center">{loggedInUser.admin ? <span>You have {subscriptedUser.length} subscripted users</span> : yourSubscription ? "Your Subscription" : <span>Hello, {loggedInUser.name}<br />You have no subscription yet :(</span>}</h2> */}
                 <div>
 
                     {
                         !isLoading &&
                         (loggedInUser.admin ?
-                            <h2 style={{position:"static"}} className="brand-text text-center">Subscripted Users </h2>
+                            <h2 style={{ position: "static" }} className="brand-text text-center">Subscripted Users </h2>
                             :
                             yourSubscription._id ? <h2 className="brand-text text-center">Your Subscription</h2>
                                 :
@@ -53,13 +53,14 @@ const Subscription = () => {
                                     <h2 className="brand-text text-center">Hello, {loggedInUser.name}</h2>
                                     <h3>You have no subscription !</h3>
                                     <img className="text-center" src={warningSad} alt="" />
+                                    <p><Link to="/">Back to home</Link> and see our pricing plan</p>
                                 </div>)
                     }
                 </div>
                 <div>
                     {loggedInUser.admin ? <SubscriptedUser subscriptedUser={subscriptedUser} />
                         :
-                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} isLoading={isLoading}/>
+                        yourSubscription && <YourSubscription yourSubscription={yourSubscription} setYourSubscription={setYourSubscription} isLoading={isLoading} />
                     }
                 </div>
             </div>

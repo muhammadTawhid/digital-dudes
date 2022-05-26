@@ -2,6 +2,24 @@
     width: 50%;
 }
 
+#noSubscription-div p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.4;
+    width: 80%;
+    margin: 10px auto 25px;
+}
+
+#noSubscription-div a {
+    font-family: 'Kanit', sans-serif;
+    color: #f14c39;
+    font-weight: 200;
+    text-decoration: none;
+    border-bottom: 1px dashed #f14c39;
+    border-radius: 2px;
+}
+
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .subscription-div {
@@ -20,6 +38,10 @@
     }
     #noSubscription-div {
         margin-top: 5em;
+    }
+
+    #noSubscription-div p{
+        font-size: 15px;
     }
     
 }

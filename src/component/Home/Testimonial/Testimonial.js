@@ -15,7 +15,6 @@ import Fade from 'react-reveal/Reveal';
 
 
 const Testimonial = () => {
-    const [matches, setMatches] = useState()
     const [reviews, setReviews] = useState([]);
     const skeletonData = ["1", "2", "3", "4", "5"];
 
@@ -24,14 +23,6 @@ const Testimonial = () => {
             .then(res => setReviews(res.data))
     }, [])
 
-    console.log(matches, "match");
-
-    useEffect(() => {
-        window
-            .matchMedia("(min-width: 300.98px)")
-            .addEventListener('change', e => setMatches(e.matches));
-    }, []);
-
 
     return (
         <Fade bottom>
@@ -39,8 +30,21 @@ const Testimonial = () => {
                 <h2 className="brand-text text-center testimonial-heading">Clients Feedback</h2>
                 <div className="container">
                     <Swiper
-                        slidesPerView={3}
-                        spaceBetween={30}
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 30
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 30
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                                spaceBetween: 30
+                            }
+                        }}
+                        loop={true}
                         freeMode={true}
                         pagination={{
                             clickable: true,
