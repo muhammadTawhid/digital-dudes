@@ -1,19 +1,20 @@
-import './Subscribe.css'
+import './NewsLetter.css'
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faGrinAlt } from '@fortawesome/free-solid-svg-icons'
 import Bounce from 'react-reveal/Reveal';
 
-const Subscribe = () => {
+const NewsLetter = () => {
     const [subscriptedLetter, setSubscriptedLetter] = useState(false);
 
     const handleEmailSubmit = e => {
         e.preventDefault();
         setSubscriptedLetter(true);
     }
+
     return (
         <Bounce left>
-            <div className="subscribe-panel  d-flex align-items-center">
+            <div className="newsLetter-panel  d-flex align-items-center">
                 {subscriptedLetter ?
                     <div className="container">
                         <h1 className="brand-text text-white mb-5">Thanks for subscribing to our newsletter.</h1> <FontAwesomeIcon icon={faGrinAlt} />
@@ -46,4 +47,4 @@ const Subscribe = () => {
     );
 };
 
-export default Subscribe;
+export default NewsLetter;

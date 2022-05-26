@@ -5,7 +5,7 @@ import Pricing from '../Pricing/Pricing';
 import Services from '../Services/Services';
 import Team from '../Team/Team';
 import Testimonial from '../Testimonial/Testimonial';
-import Subscribe from '../Subscribe/Subscribe';
+import NewsLetter from '../NewsLetter/NewsLetter';
 import Footer from '../Footer/Footer';
 
 const Home = () => {
@@ -15,16 +15,16 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <Header />
             <Services />
             <Pricing />
             <AppointmentAndFaq />
             <Team />
             <Testimonial />
-            <Subscribe />
+            <NewsLetter />
             <Footer />
-        </div>
+        </>
     );
 };
 

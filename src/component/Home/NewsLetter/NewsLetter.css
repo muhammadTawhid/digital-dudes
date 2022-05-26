@@ -1,4 +1,4 @@
-.subscribe-panel {
+.newsLetter-panel {
     width: 100%;
     height: 250px;
     text-align: center;
@@ -6,17 +6,17 @@
     color: white;
 }
 
-.subscribe-panel svg {
+.newsLetter-panel svg {
     font-size: 40px;
     color: white;
 }
 
-.subscribe-panel h2 {
+.newsLetter-panel h2 {
     font-size: 50px;
     font-weight: 700;
 }
 
-.subscribe-panel p {
+.newsLetter-panel p {
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     font-weight: normal;
@@ -27,7 +27,7 @@
 
 
 
-.subscribe-panel input {
+.newsLetter-panel input {
     padding: 20px 20px;
     border: none;
     width: 420px;
@@ -35,7 +35,7 @@
     border-radius: 50px;
 }
 
-.subscribe-panel button {
+.newsLetter-panel button {
     margin-left: -9.7em;
     padding: 15px 20px;
     border: none;
@@ -47,15 +47,15 @@
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
-    .subscribe-panel {
+    .newsLetter-panel {
         height: 300px;
     }
 
-    .subscribe-panel h1 {
+    .newsLetter-panel h1 {
         font-size: 25px;
     }
 
-    .subscribe-panel h2 {
+    .newsLetter-panel h2 {
         font-size: 25px;
     }
 
@@ -67,22 +67,22 @@
         font-size: 30px;
     }
 
-    .subscribe-panel input {
+    .newsLetter-panel input {
         width: 300px;
     }
 }
 
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
-    .subscribe-panel {
+    .newsLetter-panel {
         height: 300px;
     }
 
-    .subscribe-panel h1 {
+    .newsLetter-panel h1 {
         font-size: 30px;
     }
 
-    .subscribe-panel h2 {
+    .newsLetter-panel h2 {
         font-size: 40px;
     }
 
@@ -90,22 +90,22 @@
         text-align: center;
     }
 
-    .subscribe-panel input {
+    .newsLetter-panel input {
         width: 380px;
     }
 }
 
 /* Medium devices */
 @media (min-width: 767.98px) and (max-width: 991.98px) {
-    .subscribe-panel {
+    .newsLetter-panel {
         height: 250px;
     }
 
-    .subscribe-panel h1 {
+    .newsLetter-panel h1 {
         font-size: 35px;
     }
 
-    .subscribe-panel h2 {
+    .newsLetter-panel h2 {
         font-size: 25px;
     }
 
@@ -117,12 +117,12 @@
         font-size: 30px;
     }
 
-    .subscribe-panel input {
+    .newsLetter-panel input {
         padding: 10px 10px;
         width: 330px;
     }
 
-    .subscribe-panel button {
+    .newsLetter-panel button {
         padding: 5px 10px;
         font-size: 15px;
         font-weight: 600;
@@ -133,11 +133,11 @@
 
 /* Large devices */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
-    .subscribe-panel h1 {
+    .newsLetter-panel h1 {
         font-size: 40px;
     }
 
-    .subscribe-panel h2 {
+    .newsLetter-panel h2 {
         font-size: 35px;
     }
 
@@ -150,7 +150,7 @@
         font-size: 30px;
     }
 
-    .subscribe-panel input {
+    .newsLetter-panel input {
         width: 370px;
     }
 
@@ -158,7 +158,7 @@
 
 /* X-Large devices */
 @media (min-width: 1199.98px) and (max-width: 2000px) {
-    .subscribe-panel h1 {
+    .newsLetter-panel h1 {
         font-size: 45px;
     }
 
