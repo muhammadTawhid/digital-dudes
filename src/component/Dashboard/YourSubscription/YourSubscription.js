@@ -21,12 +21,10 @@ const YourSubscription = ({ yourSubscription, setYourSubscription, isLoading }) 
             })
     }
 
-    console.log({yourSubscription});
-
     return (
         <div>
-            {isLoading ? 
-                <div className="yourSubscription-div"  id="yourSubscription-skeleton-div">
+            {isLoading ?
+                <div className="yourSubscription-div" id="yourSubscription-skeleton-div" style={{marginTop:"6em"}}>
                     <Skeleton className="subscriptionDetail-skeleton-h2" width={300} height={40} />
                     <p><Skeleton className="subscriptionDetail-skeleton-p" width={600} height={20} /></p>
                     <div className="subscriptionDetail-div subscriptionDetail-skeleton-div">
@@ -56,34 +54,34 @@ const YourSubscription = ({ yourSubscription, setYourSubscription, isLoading }) 
                         </div>
                     </div>
                 </div>
-               :
+                :
                 <div className="yourSubscription-div">
-                <h2>Plan &  Payment</h2>
-                <p>Select the plan that's best for you. You can cancel your subscription at any time</p>
-                <div className="subscriptionDetail-div">
-                    <div className="row d-flex justify-content-between">
-                        <div className="col-md-6">
-                            <h3>{yourSubscription.paymentFor}</h3>
-                            <p>${yourSubscription.amount}/month <span>Billed monthly</span></p>
-                            <p><span>{daysLeft <= 30 ? remainingDays + " days remaining" : <small className="text-danger">Subscription Disabled</small>}</span></p>
+                    <h2>Plan &  Payment</h2>
+                    <p>Select the plan that's best for you. You can cancel your subscription at any time</p>
+                    <div className="subscriptionDetail-div">
+                        <div className="row d-flex justify-content-between">
+                            <div className="col-md-6">
+                                <h3>{yourSubscription.paymentFor}</h3>
+                                <p>${yourSubscription.amount}/month <span>Billed monthly</span></p>
+                                <p><span>{daysLeft <= 30 ? remainingDays + " days remaining" : <small className="text-danger">Subscription Disabled</small>}</span></p>
+                            </div>
+                            <div className="col-md-6 text-end">
+                                <Link to="/">
+                                    <button>Change Plan</button>
+                                </Link>
+                            </div>
                         </div>
-                        <div className="col-md-6 text-end">
-                            <Link to="/">
-                                <button>Change Plan</button>
-                            </Link>
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="row d-flex align-items-center">
-                        <div className="col-md-6">
-                            <p><span>PAYMENT METHOD</span></p><FontAwesomeIcon icon={faCcVisa} /><FontAwesomeIcon icon={faCcMastercard} /><FontAwesomeIcon icon={faCcAmazonPay} />
-                        </div>
-                        <div className="col-md-6 text-end">
-                            <button onClick={() => handleDeletePlan(yourSubscription._id)}>Cancel Plan</button>
+                        <hr />
+                        <div className="row d-flex align-items-center">
+                            <div className="col-md-6">
+                                <p><span>PAYMENT METHOD</span></p><FontAwesomeIcon icon={faCcVisa} /><FontAwesomeIcon icon={faCcMastercard} /><FontAwesomeIcon icon={faCcAmazonPay} />
+                            </div>
+                            <div className="col-md-6 text-end">
+                                <button onClick={() => handleDeletePlan(yourSubscription._id)}>Cancel Plan</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             }
         </div>
     );

@@ -18,9 +18,10 @@ import Sidebar from './component/Dashboard/Sidebar/Sidebar';
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({ name: "tanjim", email: "sonda1@gmail.com", imgUrl: "https://i.ibb.co/WKjYBgg/user-Avatar.png", admin: true })
   const [sidebar, setSidebar] = useState(true);
+  const [loggedInUser, setLoggedInUser] = useState({ name: "tanjim", email: "sonda1@gmail.com", imgUrl: "https://i.ibb.co/WKjYBgg/user-Avatar.png", admin: true })
   // const [loggedInUser, setLoggedInUser] = useState({ name: "", email: "", imgUrl: "", admin: null })
+
   console.log(loggedInUser)
 
   return (

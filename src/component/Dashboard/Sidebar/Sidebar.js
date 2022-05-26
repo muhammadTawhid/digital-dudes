@@ -17,6 +17,14 @@ const Sidebar = () => {
     document.title = "Dashboard"
   }, []);
 
+  useEffect(() => {
+    if (width <= 575) {
+      setSidebar(false);
+    }
+    else {
+      setSidebar(true);
+    }
+  }, [])
 
   const showSidebar = () => {
     setSidebar(!sidebar)

@@ -3,9 +3,10 @@
 }
 
 .testimonial-card {
+    width: 97%;
     height: 385px;
     overflow: hidden;
-    margin: 20px 0 50px 0;
+    margin: 20px auto 50px auto;
     padding: 20px 15px;
     text-align: center;
     border-radius: 10px;
@@ -62,5 +63,12 @@
 @media (min-width: 767.98px) and (max-width: 991.98px) {
     .testimonial-heading {
         font-size: 50px;
+    }
+}
+
+/* XL devices */
+@media (min-width: 1200px) and (max-width: 2000px) {
+    .testimonial-card {
+        padding: 20px;
     }
 }

@@ -1,11 +1,11 @@
-.subscription-div img{
+.subscription-div img {
     width: 50%;
 }
 
 #noSubscription-div p {
     font-family: 'Kanit', sans-serif;
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.4;
     width: 80%;
     margin: 10px auto 25px;
@@ -14,7 +14,7 @@
 #noSubscription-div a {
     font-family: 'Kanit', sans-serif;
     color: #f14c39;
-    font-weight: 200;
+    font-weight: 400;
     text-decoration: none;
     border-bottom: 1px dashed #f14c39;
     border-radius: 2px;
@@ -28,22 +28,24 @@
         z-index: -1;
         margin-top: .8em;
     }
+
     .subscription-div img {
         width: 70%;
     }
-    
+
     .subscription-div h2 {
         font-size: 30px;
         margin-bottom: .7em;
     }
+
     #noSubscription-div {
         margin-top: 5em;
     }
 
-    #noSubscription-div p{
+    #noSubscription-div p {
         font-size: 15px;
     }
-    
+
 }
 
 /* Small devices */
@@ -54,9 +56,11 @@
         z-index: -1;
         margin-top: .2em;
     }
+
     .subscription-div img {
         width: 70%;
     }
+
     .subscription-div h2 {
         font-size: 40px;
         margin-bottom: .6em;
@@ -75,6 +79,7 @@
         z-index: -1;
         margin-top: .5em;
     }
+
     .subscription-div h2 {
         font-size: 45px;
         margin-bottom: .5em;

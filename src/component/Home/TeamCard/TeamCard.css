@@ -88,10 +88,11 @@
 
 /* Small devices */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
-    .team-card{
+    .team-card {
         flex: 0 0 auto;
         width: 50%;
     }
+
     .team-heading {
         font-size: 50px;
         margin-bottom: 10px;
@@ -103,7 +104,7 @@
     }
 
     .team-card div {
-        transform: translateY(-320px) translateX(20px);
+        transform: translateY(-320px) translateX(14px);
     }
 }
 
