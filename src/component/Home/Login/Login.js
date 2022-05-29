@@ -161,7 +161,7 @@ const Login = () => {
     const handleGetIdToken = () => {
         getAuth().currentUser.getIdToken(true)
             .then(function (idToken) {
-                sessionStorage.setItem("loggedInUserToken", idToken)
+                localStorage.setItem("loggedInUserToken", idToken)
             })
             .catch(function (error) {
                 console.log(error);
@@ -182,7 +182,6 @@ const Login = () => {
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
                         history("/dashboard/subscription");
-                        e.preventDefault();
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -192,13 +191,11 @@ const Login = () => {
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
                         history("/dashboard/subscription");
-                        e.preventDefault();
                     }
                 })
         }
 
     };
-
 
     return (
         <div className="login-div">

@@ -14,7 +14,7 @@ const HeaderNavbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isSticky, setSticky] = useState(false);
     const [isNavbarActive, setIsNavbarActive] = useState(false)
-    console.log(loggedInUser)
+    const localStorageItems = ["newLoggedInUser", "loggedInUserToken"];
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -28,6 +28,7 @@ const HeaderNavbar = () => {
 
     const handleLogOut = () => {
         setLoggedInUser("");
+        localStorageItems.forEach(items => localStorage.removeItem(items))
     }
 
 

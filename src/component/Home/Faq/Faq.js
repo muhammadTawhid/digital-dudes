@@ -32,7 +32,7 @@ const Faq = () => {
             <h2 className="brand-text text-center">Get Your Answer</h2>
             {
                 faqData.map(data =>
-                    <Collapsible trigger={[data.faqTitle, <FontAwesomeIcon icon={faAngleDown} />]} className="panel-header" >
+                    <Collapsible key={data.faqTitle} trigger={[data.faqTitle, <FontAwesomeIcon key={data.faqTitle} icon={faAngleDown} />]} className="panel-header" >
                         <p>{data.faqDescription}</p>
                     </Collapsible>
                 )

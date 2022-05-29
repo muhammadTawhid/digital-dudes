@@ -27,7 +27,7 @@ const Pricing = () => {
                         {
                             pricing[0] === undefined &&
                             skeletonData.map(data =>
-                                <div className="pricing-card">
+                                <div key={data} className="pricing-card">
                                     <Skeleton width={130} height={25} />
                                     <Skeleton width={200} height={40} className="my-3" />
                                     <Skeleton width={180} height={20} count={7} className="my-2" />

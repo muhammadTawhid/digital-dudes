@@ -31,7 +31,7 @@ const SubscriptedUser = ({ subscriptedUser }) => {
                                     {
                                         (Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) <= 30)
                                             ?
-                                            (30 - Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) + " days remaining")
+                                            <span>{(30 - Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) + " days remaining")}</span>
                                             :
                                             <span className="text-danger">Subscription <span id="disabled-text">disabled</span></span>
                                     }

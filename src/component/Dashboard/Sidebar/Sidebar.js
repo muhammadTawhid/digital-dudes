@@ -12,6 +12,7 @@ import useWindowDimensions from '../../Hooks/useWindowDimensions';
 const Sidebar = () => {
   const { width } = useWindowDimensions();
   const [loggedInUser, setLoggedInUser, sidebar, setSidebar] = useContext(UserContext);
+  const localStorageItems = ["newLoggedInUser", "loggedInUserToken"];
 
   useEffect(() => {
     document.title = "Dashboard"
@@ -37,6 +38,16 @@ const Sidebar = () => {
     else {
       setSidebar(true);
     }
+  }
+
+  // storing state to local storage
+  useEffect(() => {
+    localStorage.setItem("newLoggedInUser", JSON.stringify(loggedInUser))
+  }, [])
+
+  const handleLogOut = () => {
+    setLoggedInUser("")
+    localStorageItems.forEach(items => localStorage.removeItem(items))
   }
 
   return (
@@ -76,12 +87,12 @@ const Sidebar = () => {
             loggedInUser.admin ?
               SidebarAdminData.map((item, index) => {
                 return (
-                    <li key={index} className={item.cName} onClick={sidebarDisable}>
-                      <Link to={item.path}>
-                        {item.icon}
-                        <span className="sidebar-title">{item.title}</span>
-                      </Link>
-                    </li>
+                  <li key={index} className={item.cName} onClick={sidebarDisable}>
+                    <Link to={item.path}>
+                      {item.icon}
+                      <span className="sidebar-title">{item.title}</span>
+                    </Link>
+                  </li>
                 )
               })
               :
@@ -97,7 +108,7 @@ const Sidebar = () => {
               })
           }
           <li className="sidebar-text">
-            <button onClick={() => setLoggedInUser("")}>
+            <button onClick={handleLogOut}>
               <FontAwesomeIcon icon={faSignOutAlt} />
               <span className="sidebar-title">Log Out</span>
             </button>

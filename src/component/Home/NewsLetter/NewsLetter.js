@@ -21,9 +21,9 @@ const NewsLetter = () => {
                     </div>
                     :
 
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 col-xl-7 col-lg-6">
+                    <div className="container">
+                        <div className="row align-items-center">
+                            <div className="col-md-6 col-xl-7 col-lg-6">
                                 <div className="icon">
                                     <FontAwesomeIcon icon={faPaperPlane} />
                                 </div>
@@ -33,7 +33,7 @@ const NewsLetter = () => {
                                 </div>
 
                             </div>
-                            <div class="col-md-6 col-xl-5 col-lg-6">
+                            <div className="col-md-6 col-xl-5 col-lg-6">
                                 <form onSubmit={handleEmailSubmit}>
                                     <input type="email" name="" id="" placeholder="Email Address..." required />
                                     <button type="submit">Subscribe Now</button>

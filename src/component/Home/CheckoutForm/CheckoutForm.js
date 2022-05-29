@@ -31,7 +31,9 @@ const CheckoutForm = ({ pricing }) => {
 
     useEffect(() => {
         axios.get("https://digital-dudes.herokuapp.com/subscriptedUser/" + loggedInUser.email, {
-            headers: { authorization: sessionStorage.getItem("loggedInUserToken") }
+            headers: {
+                authorization: localStorage.getItem("loggedInUserToken")
+            }
         })
             .then(res => {
                 setYourSubscription(res.data)

@@ -14,15 +14,25 @@ import Subscription from './component/Dashboard/Subscription/Subscription';
 import ActionPageForm from './component/Dashboard/ActionPageForm/ActionPageForm';
 import PrivetRoute from './component/Home/PrivetRoute/PrivetRoute';
 import Sidebar from './component/Dashboard/Sidebar/Sidebar';
+import { useEffect } from 'react';
 
 export const UserContext = createContext();
 
 function App() {
   const [sidebar, setSidebar] = useState(true);
-  // const [loggedInUser, setLoggedInUser] = useState({ name: "tanjim", email: "sonda1@gmail.com", imgUrl: "https://i.ibb.co/WKjYBgg/user-Avatar.png", admin: true })
+  const newLoggedInUser = localStorage.getItem("newLoggedInUser")
   const [loggedInUser, setLoggedInUser] = useState({ name: "", email: "", imgUrl: "", admin: null })
 
-  console.log(loggedInUser)
+  console.log(loggedInUser, "i am from app js")
+
+  useEffect(() => {
+    if (newLoggedInUser) {
+      setLoggedInUser(JSON.parse(newLoggedInUser))
+    }
+    else {
+      setLoggedInUser({ name: "", email: "", imgUrl: "", admin: null })
+    }
+  }, [])
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser, sidebar, setSidebar]}>

@@ -56,9 +56,10 @@
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .yourSubscription-div {
         width: 90%;
+        margin: 3em auto;
     }
 
-    #yourSubscription-skeleton-div{
+    #yourSubscription-skeleton-div {
         margin-top: 5em;
     }
 
