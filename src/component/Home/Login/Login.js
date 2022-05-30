@@ -170,7 +170,7 @@ const Login = () => {
     }
 
     // user info updating on state
-    const setUserInfo = (user, e) => {
+    const setUserInfo = (user) => {
         if (user) {
             axios.get("https://digital-dudes.herokuapp.com/admins/" + user.email)
                 .then(res => {
@@ -182,7 +182,9 @@ const Login = () => {
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
                         handleSetNewLoggedInUser(newSignedInUser);
-                        history("/dashboard/subscription");
+                        if (newSignedInUser) {
+                            history("/dashboard/subscription");
+                        }
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -192,7 +194,9 @@ const Login = () => {
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
                         handleSetNewLoggedInUser(newSignedInUser);
-                        history("/dashboard/subscription");
+                        if (newSignedInUser) {
+                            history("/dashboard/subscription");
+                        }
                     }
                 })
         }
