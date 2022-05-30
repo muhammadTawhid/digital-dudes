@@ -182,6 +182,7 @@ const Login = () => {
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
                         history("/dashboard/subscription");
+                        handleSetNewLoggedInUser(newSignedInUser);
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -191,11 +192,17 @@ const Login = () => {
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
                         history("/dashboard/subscription");
+                        handleSetNewLoggedInUser(newSignedInUser);
                     }
                 })
         }
 
     };
+
+      // storing state to local storage
+    const handleSetNewLoggedInUser = (newLoggedInUser) => {
+            localStorage.setItem("newLoggedInUser", JSON.stringify(newLoggedInUser))
+    }
 
     return (
         <div className="login-div">

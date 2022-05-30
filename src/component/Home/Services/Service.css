@@ -74,6 +74,10 @@
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
+    .service-card {
+        width: 90%;
+    }
+
     .service-header {
         text-align: center;
     }

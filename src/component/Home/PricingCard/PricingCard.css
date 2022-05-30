@@ -6,6 +6,15 @@
     padding: 30px;
     margin: 1em 0 2em 0;
     text-align: center;
+    transition: all 0.25s ease;
+    border: 1px solid;
+}
+
+.pricing-card:hover {
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+    transform: scale(1.06);
 }
 
 .pricing-card h4 {
@@ -39,12 +48,26 @@
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
+    .pricing-card {
+        width: 90%;
+    }
+
     .pricing-title {
         font-size: 30px;
     }
 }
 
 /* Small devices */
+@media (min-width: 450px) and (max-width: 767.98px) {
+    .pricing-card {
+        width: 90%;
+    }
+
+    .pricing-card p {
+        margin-left: 100px;
+    }
+}
+
 @media (min-width: 575.98px) and (max-width: 767.98px) {
     .pricing-title {
         font-size: 50px;

@@ -40,10 +40,6 @@ const Sidebar = () => {
     }
   }
 
-  // storing state to local storage
-  useEffect(() => {
-    localStorage.setItem("newLoggedInUser", JSON.stringify(loggedInUser))
-  }, [])
 
   const handleLogOut = () => {
     setLoggedInUser("")
