@@ -181,8 +181,8 @@ const Login = () => {
                         newSignedInUser.imgUrl = user.photoURL;
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
-                        history("/dashboard/subscription");
                         handleSetNewLoggedInUser(newSignedInUser);
+                        history("/dashboard/subscription");
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -191,17 +191,17 @@ const Login = () => {
                         newSignedInUser.imgUrl = user.photoURL;
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
-                        history("/dashboard/subscription");
                         handleSetNewLoggedInUser(newSignedInUser);
+                        history("/dashboard/subscription");
                     }
                 })
         }
 
     };
 
-      // storing state to local storage
+    // storing state to local storage
     const handleSetNewLoggedInUser = (newLoggedInUser) => {
-            localStorage.setItem("newLoggedInUser", JSON.stringify(newLoggedInUser))
+        localStorage.setItem("newLoggedInUser", JSON.stringify(newLoggedInUser))
     }
 
     return (

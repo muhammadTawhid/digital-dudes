@@ -13,7 +13,7 @@ const PricingCard = (props) => {
         <div className="col-md-4 pricing-card">
             <h4>{pricingTitle}</h4>
             <h2><span className="span-text">${pricingValue}</span><strong> / Monthly</strong></h2>
-            <div>
+            <div className="services-div">
                 {
                     services && services.map(service =>
                         <div key={service}><p><FontAwesomeIcon icon={faCheck} /> {service}</p>

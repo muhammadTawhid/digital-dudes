@@ -75,7 +75,7 @@
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .service-card {
-        width: 90%;
+        width: 85%;
     }
 
     .service-header {
@@ -89,7 +89,6 @@
     }
 
     .service-header p {
-        font-size: 15px;
         margin: 1em auto;
     }
 }

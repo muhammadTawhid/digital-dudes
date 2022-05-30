@@ -7,7 +7,6 @@
     margin: 1em 0 2em 0;
     text-align: center;
     transition: all 0.25s ease;
-    border: 1px solid;
 }
 
 .pricing-card:hover {
@@ -38,7 +37,7 @@
     font-family: "Roboto", sans-serif;
     color: #777;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .pricing-card svg {
@@ -52,23 +51,27 @@
         width: 90%;
     }
 
+    .services-div {
+        width: 180px;
+        margin: 0 auto;
+    }
+
     .pricing-title {
         font-size: 30px;
     }
 }
 
-/* Small devices */
-@media (min-width: 450px) and (max-width: 767.98px) {
+/* X-Small devices */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
     .pricing-card {
         width: 90%;
     }
 
-    .pricing-card p {
-        margin-left: 100px;
+    .services-div {
+        width: 200px;
+        margin: 0 auto;
     }
-}
 
-@media (min-width: 575.98px) and (max-width: 767.98px) {
     .pricing-title {
         font-size: 50px;
     }

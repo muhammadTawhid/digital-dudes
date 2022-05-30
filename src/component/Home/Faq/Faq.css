@@ -62,6 +62,10 @@
 
 /* X-Small devices */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
+    .faq-div {
+        padding: 0;
+    }
+
     .faq-div h2 {
         font-size: 40px;
         margin-top: 1em;
