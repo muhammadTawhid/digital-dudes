@@ -182,9 +182,7 @@ const Login = () => {
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
                         handleSetNewLoggedInUser(newSignedInUser);
-                        if (newSignedInUser) {
-                            history("/dashboard/subscription");
-                        }
+                        history("/dashboard/subscription");
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -194,9 +192,7 @@ const Login = () => {
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
                         handleSetNewLoggedInUser(newSignedInUser);
-                        if (newSignedInUser) {
-                            history("/dashboard/subscription");
-                        }
+                        history("/dashboard/subscription");
                     }
                 })
         }
@@ -236,7 +232,7 @@ const Login = () => {
                             placeholder="Name"
                         />
                     )}
-                    {errors.name && (
+                    {newUser && errors.name && (
                         <small className="err-message text-end">
                             {errors.name?.message}
                         </small>

@@ -19,7 +19,7 @@ const Sidebar = () => {
   }, []);
 
   useEffect(() => {
-    if (width <= 575) {
+    if (width <= 1199) {
       setSidebar(false);
     }
     else {
@@ -32,7 +32,7 @@ const Sidebar = () => {
   };
 
   const sidebarDisable = () => {
-    if (width <= 575) {
+    if (width <= 1199) {
       setSidebar(false);
     }
     else {

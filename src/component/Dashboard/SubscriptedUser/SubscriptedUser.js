@@ -9,7 +9,7 @@ const SubscriptedUser = ({ subscriptedUser }) => {
 
     return (
         <div className="scrollable-subscriptedUser-table">
-            <table className="text-cente table table-hover containe">
+            <table className="table table-hover containe">
                 <thead>
                     <tr>
                         <th className="table-heading"><span>#</span></th>
@@ -31,7 +31,7 @@ const SubscriptedUser = ({ subscriptedUser }) => {
                                     {
                                         (Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) <= 30)
                                             ?
-                                            <span>{(30 - Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) + " days remaining")}</span>
+                                            <span>{(30 - Math.ceil(Math.abs(new Date(user.paymentDate) - todaysDate) / (1000 * 60 * 60 * 24)) + " days ")}<span id="disabled-text">remaining</span></span>
                                             :
                                             <span className="text-danger">Subscription <span id="disabled-text">disabled</span></span>
                                     }

@@ -87,13 +87,14 @@
 .sidebar-menu {
     background-color: #2d2d2d;
     width: 250px;
-    height: 100%;
+    height: 600px;
     display: flex;
     justify-content: center;
     position: absolute;
     top: 0;
     left: -100%;
     transition: 850ms;
+    border-bottom-right-radius: 5px;
 }
 
 
@@ -167,7 +168,7 @@
 /* X-Small devices (portrait phones, less than 576px) */
 @media (min-width: 300.98px) and (max-width: 575.98px) {
     .sidebar {
-        box-shadow: 1px 1px 3px lightgray;
+        box-shadow: 0px 1px 3px lightgray;
     }
 
     .sidebar-menu {
@@ -199,8 +200,12 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 575.98px) and (max-width: 767.98px) {
+    .sidebar-menu {
+        height: 100%;
+    }
+
     .sidebar {
-        box-shadow: 1px 1px 3px lightgray;
+        box-shadow: 0px 1px 3px lightgray;
     }
 
     #sidebar-header-avatar {
@@ -222,10 +227,6 @@
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
-    .sidebar-menu {
-        height: 600px;
-    }
-
     .menu {
         font-size: 3em;
         margin-left: 1em;
@@ -240,7 +241,6 @@
 @media(min-width: 1199.98px) and (max-width: 2000px) {
     .sidebar-menu {
         width: 230px;
-        height: 600px;
     }
 
     #sidebar-avatar {
@@ -249,5 +249,11 @@
 
     .menu-bars {
         display: none;
+    }
+}
+
+@media (min-height: 720px) and (max-height: 2200px) {
+    .sidebar-menu {
+        height: 100%;
     }
 }
