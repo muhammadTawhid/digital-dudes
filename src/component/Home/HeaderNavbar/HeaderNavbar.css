@@ -44,7 +44,7 @@
 
 .navbarActive {
     border-bottom: none;
-    background-color: #2d2d2d;   
+    background-color: #2d2d2d;
 }
 
 .icon-image {
@@ -65,16 +65,16 @@
     border: none;
     background-color: transparent;
     font-weight: 600;
-} 
+}
 
-.scroll-top-btn-div{
+.scroll-top-btn-div {
     position: fixed;
     right: 50px;
     bottom: 50px;
     z-index: 1000;
 }
 
-.scroll-top-btn{
+.scroll-top-btn {
     padding: 5px 10px;
     background: white;
     border: none;
@@ -129,5 +129,12 @@
 
     .navbar-nav {
         text-align: center;
+    }
+}
+
+/* large device */
+@media (min-width: 991.98px) and (max-width: 2000.98px) {
+    .navbar-nav {
+        align-items: center;
     }
 }

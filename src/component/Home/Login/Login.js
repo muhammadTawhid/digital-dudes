@@ -22,6 +22,7 @@ import { useNavigate } from "react-router-dom";
 import HeaderNavbar from "../HeaderNavbar/HeaderNavbar";
 import Footer from "../Footer/Footer";
 import axios from "axios";
+import { Spinner } from "react-bootstrap";
 
 initializeApp(firebaseConfig);
 
@@ -30,6 +31,7 @@ const Login = () => {
     const [showPass, setShowPass] = useState(false);
     const [showConfirmPass, setShowConfirmPass] = useState(false);
     const [newUser, setNewUser] = useState(false);
+    const [signingIn, setSigningIn] = useState(false);
     const {
         register,
         handleSubmit,
@@ -58,6 +60,7 @@ const Login = () => {
     //   handle email sign up
     const onSignUpDetailSubmit = (data) => {
         if (data.name && data.email && data.password) {
+            setSigningIn(true);
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, data.email, data.password)
                 .then((userCredential) => {
@@ -105,6 +108,7 @@ const Login = () => {
     //   handle email sign in
     const onSignInDetailSubmit = (data) => {
         if (data.email && data.password) {
+            setSigningIn(true);
             const auth = getAuth();
             signInWithEmailAndPassword(auth, data.email, data.password)
                 .then((userCredential) => {
@@ -128,6 +132,7 @@ const Login = () => {
 
     // handle google sign in
     const handleGoogleSignIn = (e) => {
+        setSigningIn(true);
         const provider = new GoogleAuthProvider();
         const auth = getAuth();
         signInWithPopup(auth, provider)
@@ -143,6 +148,7 @@ const Login = () => {
 
     // handle facebook sign
     const handleFacebookSign = () => {
+        setSigningIn(true);
         const provider = new FacebookAuthProvider();
         const auth = getAuth();
         signInWithPopup(auth, provider)
@@ -182,7 +188,10 @@ const Login = () => {
                         newSignedInUser.admin = true;
                         setLoggedInUser(newSignedInUser);
                         handleSetNewLoggedInUser(newSignedInUser);
-                        history("/dashboard/subscription");
+                        if (newSignedInUser) {
+                            history("/dashboard/subscription");
+                            setSigningIn(true);
+                        }
                     }
                     else {
                         const newSignedInUser = { ...loggedInUser };
@@ -192,7 +201,10 @@ const Login = () => {
                         newSignedInUser.admin = false;
                         setLoggedInUser(newSignedInUser);
                         handleSetNewLoggedInUser(newSignedInUser);
-                        history("/dashboard/subscription");
+                        if (newSignedInUser) {
+                            history("/dashboard/subscription");
+                            setSigningIn(true);
+                        }
                     }
                 })
         }
@@ -345,11 +357,19 @@ const Login = () => {
                     <p className="or-edit">
                         <span className="or-text">Or</span>
                     </p>
-                    <button onClick={handleGoogleSignIn} className="social-btn google-btn">
-                        <FontAwesomeIcon icon={faGoogle} />Continue with Google
+                    <button onClick={handleGoogleSignIn} className={`social-btn google-btn btn btn-danger ${signingIn && "disabled"}`}>
+                        {
+                            signingIn ? <span><Spinner
+                                animation="border"
+                                size="sm"
+                                role="status"
+                                aria-hidden="true"
+                                className="me-2"
+                            />Logging...</span> : <span><FontAwesomeIcon icon={faGoogle} />Continue with Google</span>}
+
                     </button>
-                    <button onClick={handleFacebookSign} className="social-btn facebook-btn">
-                        <FontAwesomeIcon icon={faFacebookF} />Continue with Facebook
+                    <button onClick={handleFacebookSign} className={`social-btn facebook-btn btn btn-primary ${signingIn && "disable"}`}>
+                        <span><FontAwesomeIcon icon={faFacebookF} />Continue with Facebook</span>
                     </button>
                 </div>
             </form>
