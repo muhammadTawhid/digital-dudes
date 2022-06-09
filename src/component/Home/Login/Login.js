@@ -60,7 +60,6 @@ const Login = () => {
     //   handle email sign up
     const onSignUpDetailSubmit = (data) => {
         if (data.name && data.email && data.password) {
-            setSigningIn(true);
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, data.email, data.password)
                 .then((userCredential) => {
@@ -108,7 +107,6 @@ const Login = () => {
     //   handle email sign in
     const onSignInDetailSubmit = (data) => {
         if (data.email && data.password) {
-            setSigningIn(true);
             const auth = getAuth();
             signInWithEmailAndPassword(auth, data.email, data.password)
                 .then((userCredential) => {
@@ -148,7 +146,6 @@ const Login = () => {
 
     // handle facebook sign
     const handleFacebookSign = () => {
-        setSigningIn(true);
         const provider = new FacebookAuthProvider();
         const auth = getAuth();
         signInWithPopup(auth, provider)
@@ -190,7 +187,7 @@ const Login = () => {
                         handleSetNewLoggedInUser(newSignedInUser);
                         if (newSignedInUser) {
                             history("/dashboard/subscription");
-                            setSigningIn(true);
+                            setSigningIn(false);
                         }
                     }
                     else {
@@ -203,12 +200,11 @@ const Login = () => {
                         handleSetNewLoggedInUser(newSignedInUser);
                         if (newSignedInUser) {
                             history("/dashboard/subscription");
-                            setSigningIn(true);
+                            setSigningIn(false);
                         }
                     }
                 })
         }
-
     };
 
     // storing state to local storage

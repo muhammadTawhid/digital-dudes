@@ -15,7 +15,7 @@ const Sidebar = () => {
   const localStorageItems = ["newLoggedInUser", "loggedInUserToken"];
 
   useEffect(() => {
-    document.title = "Dashboard"
+    document.title = "Dashboard";
   }, []);
 
   useEffect(() => {

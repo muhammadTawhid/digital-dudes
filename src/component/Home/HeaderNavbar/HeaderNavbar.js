@@ -8,10 +8,12 @@ import { Link as LinkScroll } from "react-scroll";
 import Jump from 'react-reveal/Reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltUp, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import useWindowDimensions from '../../Hooks/useWindowDimensions';
 
 
 const HeaderNavbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { width } = useWindowDimensions();
     const [isSticky, setSticky] = useState(false);
     const [isNavbarActive, setIsNavbarActive] = useState(false)
     const localStorageItems = ["newLoggedInUser", "loggedInUserToken"];
@@ -25,6 +27,12 @@ const HeaderNavbar = () => {
             }
         });
     }, []);
+
+    useEffect(() => {
+        if (992 <= width) {
+            setIsNavbarActive(false);
+        }
+    }, [])
 
     const handleLogOut = () => {
         setLoggedInUser("");
