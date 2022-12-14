@@ -24,13 +24,13 @@ const CheckoutForm = ({ pricing }) => {
 
     useEffect(() => {
         if (pricingValue) {
-            axios.post("https://digital-dudes.herokuapp.com/create-payment-intent", { pricingValue })
+            axios.post("https://digital-dudes.onrender.com/create-payment-intent", { pricingValue })
                 .then(res => setClientSecret(res.data?.clientSecret))
         }
     }, [pricingValue])
 
     useEffect(() => {
-        axios.get("https://digital-dudes.herokuapp.com/subscriptedUser/" + loggedInUser.email, {
+        axios.get("https://digital-dudes.onrender.com/subscriptedUser/" + loggedInUser.email, {
             headers: {
                 authorization: localStorage.getItem("loggedInUserToken")
             }
@@ -92,7 +92,7 @@ const CheckoutForm = ({ pricing }) => {
                     transactionId: paymentIntent.id.split("pi_")[1],
                 }
                 if (yourSubscription._id) {
-                    axios.put("https://digital-dudes.herokuapp.com/subscriptedUserNewPlan/" + yourSubscription._id, paymentDetails)
+                    axios.put("https://digital-dudes.onrender.com/subscriptedUserNewPlan/" + yourSubscription._id, paymentDetails)
                         .then(res => {
                             if (res) {
                                 navigate("/dashboard/subscription");
@@ -100,7 +100,7 @@ const CheckoutForm = ({ pricing }) => {
                         })
                 }
                 else {
-                    axios.post("https://digital-dudes.herokuapp.com/addSubscriptedUser", paymentDetails)
+                    axios.post("https://digital-dudes.onrender.com/addSubscriptedUser", paymentDetails)
                         .then(res => {
                             if (res) {
                                 navigate("/dashboard/subscription");

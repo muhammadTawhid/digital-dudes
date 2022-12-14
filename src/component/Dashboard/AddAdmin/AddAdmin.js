@@ -26,10 +26,10 @@ const AddAdmin = ({ setAdmins }) => {
                             adminImg: adminImgUrl ? adminImgUrl : "https://i.ibb.co/WKjYBgg/user-Avatar.png",
                             adminType: "Subordinary",
                         }
-                        axios.post('https://digital-dudes.herokuapp.com/addAdmin', newAdmin)
+                        axios.post('https://digital-dudes.onrender.com/addAdmin', newAdmin)
                             .then(function (response) {
                                 if (response) {
-                                    axios.get('https://digital-dudes.herokuapp.com/admins')
+                                    axios.get('https://digital-dudes.onrender.com/admins')
                                         .then(res => setAdmins(res.data))
                                     setPending(false)
                                 }

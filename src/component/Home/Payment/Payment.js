@@ -19,7 +19,7 @@ const Payment = () => {
     const { pricingId } = useParams();
 
     useEffect(() => {
-        axios.get("https://digital-dudes.herokuapp.com/pricing/" + pricingId)
+        axios.get("https://digital-dudes.onrender.com/pricing/" + pricingId)
             .then(res => setPricing(res.data))
     }, [])
 

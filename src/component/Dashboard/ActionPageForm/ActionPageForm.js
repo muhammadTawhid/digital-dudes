@@ -33,7 +33,7 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
     useEffect(() => {
         setUpdatedService([]);
         if (serviceUpdateId) {
-            axios.get('https://digital-dudes.herokuapp.com/serviceById/' + serviceUpdateId)
+            axios.get('https://digital-dudes.onrender.com/serviceById/' + serviceUpdateId)
                 .then(res => setUpdatedService(res.data))
         }
     }, [serviceUpdateId])
@@ -70,7 +70,7 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
 
         //adding service
         if (serviceUpdateId === undefined && addReview === undefined) {
-            axios.post('https://digital-dudes.herokuapp.com/addService', newService)
+            axios.post('https://digital-dudes.onrender.com/addService', newService)
                 .then(function (response) {
                     if (response) {
                         setSuccessNotify(true)
@@ -84,7 +84,7 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
 
         //updating service
         if (serviceUpdateId) {
-            axios.patch('https://digital-dudes.herokuapp.com/updateService/' + serviceUpdateId, newService)
+            axios.patch('https://digital-dudes.onrender.com/updateService/' + serviceUpdateId, newService)
                 .then(function (response) {
                     if (response) {
                         setSuccessNotify(true)
@@ -98,10 +98,10 @@ const ActionPageForm = ({ addReview, setAddReview }) => {
 
         //add review
         if (addReview) {
-            axios.post('https://digital-dudes.herokuapp.com/addReview', newReview)
+            axios.post('https://digital-dudes.onrender.com/addReview', newReview)
                 .then(function (response) {
                     if (response) {
-                        axios.get('https://digital-dudes.herokuapp.com/reviews')
+                        axios.get('https://digital-dudes.onrender.com/reviews')
                             .then(res => setAddReview(res.data))
                         setSuccessNotify(true)
                     }

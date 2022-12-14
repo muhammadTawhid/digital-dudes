@@ -13,7 +13,7 @@ const YourSubscription = ({ yourSubscription, setYourSubscription, isLoading }) 
     const remainingDays = 30 - daysLeft;
 
     const handleDeletePlan = id => {
-        axios.delete('https://digital-dudes.herokuapp.com/deleteSubscription/' + id)
+        axios.delete('https://digital-dudes.onrender.com/deleteSubscription/' + id)
             .then(res => {
                 if (res) {
                     setYourSubscription("")

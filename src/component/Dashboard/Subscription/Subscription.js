@@ -14,16 +14,15 @@ const Subscription = () => {
     const [subscriptedUser, setSubscriptedUser] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    console.log(yourSubscription)
     useEffect(() => {
-        axios.get("https://digital-dudes.herokuapp.com/subscriptedUser")
+        axios.get("https://digital-dudes.onrender.com/subscriptedUser")
             .then(res => {
                 setSubscriptedUser(res.data)
             })
     }, [])
 
     useEffect(() => {
-        axios.get("https://digital-dudes.herokuapp.com/subscriptedUser/" + loggedInUser.email, {
+        axios.get("https://digital-dudes.onrender.com/subscriptedUser/" + loggedInUser.email, {
             headers: {
                 authorization: localStorage.getItem("loggedInUserToken")
             }

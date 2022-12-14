@@ -17,7 +17,7 @@ const ManageService = () => {
     const skeletonData = ["1", "2", "3", "4", "5", "6"];
 
     useEffect(() => {
-        axios.get('https://digital-dudes.herokuapp.com/services')
+        axios.get('https://digital-dudes.onrender.com/services')
             .then(res => setServiceData(res.data))
     }, [])
 

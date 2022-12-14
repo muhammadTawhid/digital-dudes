@@ -15,12 +15,12 @@ const EditPricing = () => {
     const skeletonData = ["1", "2", "3"];
 
     useEffect(() => {
-        axios.get("https://digital-dudes.herokuapp.com/pricing")
+        axios.get("https://digital-dudes.onrender.com/pricing")
             .then(res => setPricing(res.data))
     }, [])
 
     const handleUpdatePricing = id => {
-        axios.get("https://digital-dudes.herokuapp.com/pricing/" + id)
+        axios.get("https://digital-dudes.onrender.com/pricing/" + id)
             .then(res => setUpdatePricing(res.data))
     }
 
@@ -41,7 +41,7 @@ const EditPricing = () => {
             ],
         }
         //updating pricing
-        axios.patch('https://digital-dudes.herokuapp.com/updatePricing/' + updatePricing._id, pricingData)
+        axios.patch('https://digital-dudes.onrender.com/updatePricing/' + updatePricing._id, pricingData)
             .then(res => {
                 if (res) {
                     setSuccessNotify(true)

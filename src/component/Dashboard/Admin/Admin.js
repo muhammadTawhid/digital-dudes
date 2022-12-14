@@ -13,15 +13,15 @@ const Admin = () => {
     const skeletonData = ["1", "2", "3", "4", "5", "6"];
 
     useEffect(() => {
-        axios.get('https://digital-dudes.herokuapp.com/admins')
+        axios.get('https://digital-dudes.onrender.com/admins')
             .then(res => setAdmins(res.data))
     }, [])
 
     const handleRemoveAdmin = adminId => {
-        axios.delete('https://digital-dudes.herokuapp.com/deleteAdmin/' + adminId)
+        axios.delete('https://digital-dudes.onrender.com/deleteAdmin/' + adminId)
             .then(res => {
                 if (res) {
-                    axios.get('https://digital-dudes.herokuapp.com/admins')
+                    axios.get('https://digital-dudes.onrender.com/admins')
                         .then(res => setAdmins(res.data))
                 }
             })

@@ -12,7 +12,7 @@ const Pricing = () => {
 
 
     useEffect(() => {
-        axios.get("https://digital-dudes.herokuapp.com/pricing")
+        axios.get("https://digital-dudes.onrender.com/pricing")
             .then(res => setPricing(res.data))
     }, [])
     return (

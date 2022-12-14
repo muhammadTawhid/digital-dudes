@@ -175,7 +175,7 @@ const Login = () => {
     // user info updating on state
     const setUserInfo = (user) => {
         if (user) {
-            axios.get("https://digital-dudes.herokuapp.com/admins/" + user.email)
+            axios.get("https://digital-dudes.onrender.com/admins/" + user.email)
                 .then(res => {
                     if (res.data.length) {
                         const newSignedInUser = { ...loggedInUser };

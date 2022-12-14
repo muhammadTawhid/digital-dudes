@@ -8,11 +8,11 @@ const WarningModal = (props) => {
     const { onHide, serviceDeleteId, setServiceData } = props;
 
     const handleDeleteService = serviceDeleteId => {
-        axios.delete('https://digital-dudes.herokuapp.com/deleteService/' + serviceDeleteId)
+        axios.delete('https://digital-dudes.onrender.com/deleteService/' + serviceDeleteId)
             .then(res => {
                 if (res) {
                     onHide();
-                    axios.get('https://digital-dudes.herokuapp.com/services')
+                    axios.get('https://digital-dudes.onrender.com/services')
                         .then(res => setServiceData(res.data))
                 }
             })

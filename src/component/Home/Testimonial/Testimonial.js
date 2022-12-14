@@ -19,7 +19,7 @@ const Testimonial = () => {
     const skeletonData = ["1", "2", "3", "4", "5"];
 
     useEffect(() => {
-        axios.get('https://digital-dudes.herokuapp.com/reviews')
+        axios.get('https://digital-dudes.onrender.com/reviews')
             .then(res => setReviews(res.data))
     }, [])
 
